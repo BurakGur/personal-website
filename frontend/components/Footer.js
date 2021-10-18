@@ -26,7 +26,7 @@ function Footer() {
         </div>
       </div>
       <a
-        href="/"
+        href="https://github.com/BurakGur/personal-website"
         className="text-gray-500 text-sm hover:text-gray-800 duration-200"
       >
         Bu web sitesi açık kaynak kodlanmıştır ve kodlarına GitHub üzerinden
