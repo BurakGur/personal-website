@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "feed": "^4.2.2"
+  }
+}
