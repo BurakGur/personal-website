@@ -4,28 +4,16 @@ function About() {
       <img
         className="rounded-full mx-auto"
         src="/burak-gur.jpeg"
-        alt=""
-        width="96"
-        height="96"
+        alt="Burak Gür"
+        width="112"
+        height="112"
       />
-      <div className="px-4">
-        <p className="text-gray-600 leading-6">
-          Merhaba, ben Burak. Şu anda Sigortam.net şirketinde Frontend Developer
-          olarak çalışıyorum. Çalışırken dinlediğim müzikleri{' '}
-          <a
-            className="text-indigo-500 font-medium underline"
-            href="https://open.spotify.com/playlist/706ygDjsS24R4wZj9rLe4o?si=aoVh6ooiTO6WBAfmLz2D8A"
-          >
-            Spotify
-          </a>{' '}
-          listemden görebilirsiniz. Ayrıca bu web sitesi de dahil tüm açık
-          kaynak projelerimi{' '}
-          <a
-            className="text-indigo-500 font-medium underline"
-            href="https://github.com/burakgur"
-          >
-            GitHub
-          </a>{' '}
+      <div className="px-4 text-gray-600 leading-6">
+        <p className="font-bold">Merhaba, ben Burak.</p>
+        <p>
+          Frontend Developer olarak çalışıyorum. JavaScript, motivasyon ve
+          kişisel gelişim ile ilgili blog yazılarımı buradan okuyabilirsiniz.
+          Ayrıca bu web sitesi de dahil tüm açık kaynak projelerimi GitHub
           üzerinden paylaşıyorum.
         </p>
       </div>
