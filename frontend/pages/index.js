@@ -1,9 +1,21 @@
 import { useTheme } from 'next-themes';
 import About from '../components/About';
-import { timeToRead } from '../lib/helpers';
+import ArticleList from '../components/ArticleList';
+import { fetchAPI } from '../lib/api';
 
-export default function Home() {
-  const { theme, setTheme } = useTheme();
+export default function Home({ articles }) {
+  return (
+    <>
+      <About />
+      <ArticleList articles={articles} />
+    </>
+  );
+}
 
-  return <About />;
+export async function getStaticProps() {
+  const articles = await fetchAPI('/articles');
+  return {
+    props: { articles },
+    revalidate: 1
+  };
 }
