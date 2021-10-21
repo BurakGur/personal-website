@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import { gtmId } from '../config';
 
 class MyDocument extends Document {
   render() {
@@ -16,6 +17,20 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
             rel="stylesheet"
+          />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gtmId}', { page_path: window.location.pathname });
+            `
+            }}
           />
         </Head>
         <body className="container">
