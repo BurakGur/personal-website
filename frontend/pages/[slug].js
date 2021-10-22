@@ -1,7 +1,8 @@
+import Article from '../components/Article';
 import { fetchAPI } from '../lib/api';
 
 const ArticlePage = ({ article }) => {
-  return <>{article.title}</>;
+  return <Article article={article} />;
 };
 
 export async function getStaticPaths() {
