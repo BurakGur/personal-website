@@ -1,4 +1,3 @@
-import { useTheme } from 'next-themes';
 import About from '../components/About';
 import ArticleList from '../components/ArticleList';
 import { fetchAPI } from '../lib/api';

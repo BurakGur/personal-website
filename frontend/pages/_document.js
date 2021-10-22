@@ -1,12 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import { gtmId } from '../config';
+import { locale, gtmId } from '../config';
 
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang={locale}>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
