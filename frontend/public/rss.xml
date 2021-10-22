@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>burak gür. - RSS Feed</title>
+        <link>https://burakgur.com</link>
+        <description>Burak Gür'ün Kişisel Blog sitesidir. JavaScript, motivasyon ve kişisel gelişimle ilgilidir.</description>
+        <lastBuildDate>Fri, 22 Oct 2021 20:24:58 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Next.js</generator>
+        <language>tr</language>
+        <item>
+            <title><![CDATA[JavaScript’te empty slot nedir?]]></title>
+            <pubDate>Wed, 20 Oct 2021 14:57:39 GMT</pubDate>
+            <description><![CDATA[Bu yazımda sizlere empty slot, dense array ve sparse array kavramlarını basit bir şekilde anlatmaya çalışacağım.]]></description>
+            <content:encoded><![CDATA[JavaScript’te dizi (array) anlaşılması çok kolay gözükse de içerisinde bir çok detay barındıran bir veridir. Array için kısaca; “içerisinde birden fazla veri saklanmak için oluşturulan non-primitive (referans bazlı) veri tipidir.” diyebiliriz.
+Aşağıdaki gibi basit bir array oluşturalım:
+
+```javascript
+const items = ['apple', 'orange', 'banana']
+```
+
+Oluşturduğumuz bu array dense array yani yoğun dizidir. Peki ya dense array ne demektir?
+
+### Dense Array
+Dense array içerisinde herhangi bir boş alan (empty slot) olmadan tanımlanan array türüdür. Bu sefer de bir diğer soru geliyor: empty slot ne demektir peki?
+
+### Empty Slot
+Bir array içerisinde yer alan boş alanlardır. Bu boş alanlar genellikle tanımladığımız array içerisinde herhangi bir index değerine tanımlama yapmadan diğer bir index değerine tanımlama yaptığımız zaman oluşur. Bu ne demek peki? Hemen bir örnekle gösterelim:
+
+```javascript
+const items = ['apple', 'orange', 'banana']
+items[8] = 'kiwi'
+```
+
+Yukarıdaki örnekte ne yaptık. Normalde 0, 1, 2 şeklinde giden index değerinde 3. olarak değil de 8. index olarak ekledik. Yani arada kalan index değerlerine hiç bir şey eklemeden yani onları empty slot olarak bırakarak 8. index değerine tanımlama yaptık. Peki bu kodu yazdırırsak bize nasıl bir sonuç döndürecek?
+
+Kodu yazdırdığımızda <5 empty items>kısmı, bizim boş alanlarımızı (empty slots) ifade etmektedir. Bu tarz içerisinde empty slot olan array türlerine de sparse array yani seyrek dizi diyoruz.
+Empty slots yani boş alanlar da tanımladığımız array içerisinde yer almaktadır fakat boştur. Yani biz tanımladığımız array değişkeninin içerisindeki eleman sayısını yazdırdığımızda 4 değil 9 sonucunu alırız.
+
+Empty slot, dense array ve sparse array kavramlarından kısaca bahsettik. Umarım faydalı olmuştur.]]></content:encoded>
+        </item>
+    </channel>
+</rss>

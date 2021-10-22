@@ -1,8 +1,8 @@
 import { Feed } from 'feed';
-import fs from 'node:fs/promises';
+import fs from 'fs';
 import { author, url, title, description } from '../config';
 
-const generateRSS = async blogs => {
+const generateRSS = async articles => {
   const feed = new Feed({
     title: `${title} - RSS Feed`,
     description: description,
@@ -14,14 +14,14 @@ const generateRSS = async blogs => {
     author: author
   });
 
-  for (const post of blogs) {
+  for (const article of articles) {
     feed.addItem({
-      title: post.title,
-      id: post.url,
-      link: post.url,
-      description: post.description,
-      content: post.content,
-      date: new Date(post.published_at)
+      title: article.title,
+      id: article.url,
+      link: article.url,
+      description: article.description,
+      content: article.content,
+      date: new Date(article.published_at)
     });
   }
   fs.writeFileSync('./public/rss.xml', feed.rss2());
