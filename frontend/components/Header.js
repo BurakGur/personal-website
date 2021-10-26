@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import { title } from '../config';
 import { Bars } from '../icons';
 
 function Header() {
   return (
     <header className="flex justify-between items-center my-10">
       <div className="text-3xl font-bold text-indigo-500">
-        <Link href="/">burak gür.</Link>
+        <Link href="/">{title}</Link>
       </div>
       <button
         type="button"

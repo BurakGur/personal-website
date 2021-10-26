@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "svgr": "svgr ./public/icons -d ./icons --svg-props 'className=' --svgo-config .svgr.json"
@@ -37,6 +38,7 @@
     "eslint-plugin-unicorn": "^37.0.1",
     "husky": "^7.0.2",
     "lint-staged": "^11.2.3",
+    "next-sitemap": "^1.6.192",
     "postcss": "^8.3.9",
     "prettier": "2.4.1",
     "tailwindcss": "^2.2.17"
