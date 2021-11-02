@@ -13,7 +13,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "feed": "^4.2.2",
-    "kbar": "0.1.0-beta.6",
+    "kbar": "0.1.0-beta.9",
     "moment": "^2.29.1",
     "next": "^12.0.1",
     "next-themes": "^0.0.15",
