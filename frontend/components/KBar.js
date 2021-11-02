@@ -57,7 +57,7 @@ function KbarItem({ action, handlers, state }) {
 }
 
 function KBar({ children }) {
-  const history = useRouter();
+  const router = useRouter();
   const { setTheme } = useTheme();
 
   return (
@@ -68,7 +68,7 @@ function KBar({ children }) {
           name: 'Anasayfa',
           shortcut: [],
           keywords: '',
-          perform: () => history.push('/'),
+          perform: () => router.push('/'),
           icon: <HomeLight width="22" height="22" />
         },
         {
@@ -85,7 +85,7 @@ function KBar({ children }) {
           name: 'RSS',
           shortcut: [],
           keywords: '',
-          perform: () => history.push('/'),
+          perform: () => router.push('/rss.xml'),
           icon: <RssLight width="20" height="20" />
         },
         {
