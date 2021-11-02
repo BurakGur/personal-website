@@ -8,7 +8,7 @@ import {
 } from 'kbar';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
-import { HomeLight, RssLight, AtLight, SunLight } from '../icons';
+import { HomeLight, RssLight, AtLight, SunLight, MoonLight } from '../icons';
 
 function Kbd({ className, children }) {
   return (
@@ -59,7 +59,6 @@ function KbarItem({ action, handlers, state }) {
 function KBar({ children }) {
   const router = useRouter();
   const { setTheme } = useTheme();
-
   return (
     <KBarProvider
       actions={[
@@ -93,7 +92,6 @@ function KBar({ children }) {
           name: 'Tema Değiştir',
           shortcut: [],
           keywords: 'theme',
-          // perform: () => setTheme('light'),
           children: ['theme-light', 'theme-dark'],
           icon: <SunLight width="20" height="20" />
         },
@@ -103,7 +101,8 @@ function KBar({ children }) {
           shortcut: [],
           keywords: 'theme',
           perform: () => setTheme('light'),
-          parent: 'theme'
+          parent: 'theme',
+          icon: <SunLight width="20" height="20" />
         },
         {
           id: 'theme-dark',
@@ -111,7 +110,8 @@ function KBar({ children }) {
           shortcut: [],
           keywords: 'theme',
           perform: () => setTheme('dark'),
-          parent: 'theme'
+          parent: 'theme',
+          icon: <MoonLight width="20" height="20" />
         }
       ]}
       options={{
