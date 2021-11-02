@@ -1,10 +1,13 @@
 import 'tailwindcss/tailwind.css';
 import { ThemeProvider } from 'next-themes';
+import KBar from '../components/KBar';
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
-      <Component {...pageProps} />
+      <KBar>
+        <Component {...pageProps} />
+      </KBar>
     </ThemeProvider>
   );
 }
