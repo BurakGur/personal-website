@@ -8,6 +8,7 @@ import {
 } from 'kbar';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
+import { HomeLight, RssLight, AtLight, SunLight } from '../icons';
 
 function Kbd({ className, children }) {
   return (
@@ -22,13 +23,13 @@ function KbarItem({ action, handlers, state }) {
 
   return (
     <div
-      className="flex items-center rounded p-3 text-gray-600 cursor-pointer transition-all dark:text-gray-500"
+      className="flex items-center rounded px-4 py-3 text-sm text-gray-500 cursor-pointer transition-all dark:text-gray-500"
       {...handlers}
     >
       {action.icon}
-      <span className="ml-3">{action.name}</span>
+      <span className="ml-4">{action.name}</span>
       {action.shortcut?.length > 0 && (
-        <span className="ml-auto space-x-1">
+        <span className="ml-auto space-x-2">
           {action.shortcut.map(sc => (
             <Kbd key={sc}>{sc}</Kbd>
           ))}
@@ -68,22 +69,16 @@ function KBar({ children }) {
           shortcut: [],
           keywords: '',
           perform: () => history.push('/'),
-          icon: (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-          )
+          icon: <HomeLight width="22" height="22" />
+        },
+        {
+          id: 'email',
+          name: 'E-posta Gönder',
+          shortcut: [],
+          keywords: 'eposta merhaba',
+          section: 'Eposta Gönder',
+          perform: () => window.open('mailto:gurbrk@gmail.com', '_blank'),
+          icon: <AtLight width="20" height="20" />
         },
         {
           id: 'rss',
@@ -91,61 +86,16 @@ function KBar({ children }) {
           shortcut: [],
           keywords: '',
           perform: () => history.push('/'),
-          icon: (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-          )
-        },
-        {
-          id: 'email',
-          name: 'Email',
-          shortcut: [],
-          keywords: 'eposta merhaba',
-          section: 'Eposta Gönder',
-          perform: () => window.open('mailto:gurbrk@gmail.com', '_blank')
+          icon: <RssLight width="20" height="20" />
         },
         {
           id: 'theme',
-          name: 'Tema',
+          name: 'Tema Değiştir',
           shortcut: [],
           keywords: 'theme',
           // perform: () => setTheme('light'),
           children: ['theme-light', 'theme-dark'],
-          icon: (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="12" cy="12" r="5" />
-              <line x1="12" y1="1" x2="12" y2="3" />
-              <line x1="12" y1="21" x2="12" y2="23" />
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-              <line x1="1" y1="12" x2="3" y2="12" />
-              <line x1="21" y1="12" x2="23" y2="12" />
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-            </svg>
-          )
+          icon: <SunLight width="20" height="20" />
         },
         {
           id: 'theme-light',
@@ -174,7 +124,7 @@ function KBar({ children }) {
       <KBarPortal>
         <KBarPositioner className="bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70">
           <KBarAnimator className="container w-full">
-            <div className="bg-white rounded-lg shadow-lg dark:bg-gray-900">
+            <div className="bg-white rounded-lg shadow-lg dark:bg-gray-900 pb-2">
               <KBarSearch
                 placeholder="Ne yapmak istiyorsun?"
                 className="appearance-none rounded w-full py-5 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -204,6 +154,9 @@ function KBar({ children }) {
                     ile aksiyon alabilirsin
                   </span>
                 </div>
+              </div>
+              <div className="text-sm font-medium text-gray-600 px-4 py-2">
+                Menü
               </div>
               <KBarResults
                 onRender={(action, handlers, state) => (
