@@ -1,8 +1,14 @@
 import Article from '../components/Article';
+import DefaultLayout from '../layout/Default';
 import { fetchAPI } from '../lib/api';
 
 const ArticlePage = ({ article }) => {
-  return <Article article={article} />;
+  const { title, description } = article;
+  return (
+    <DefaultLayout title={title} description={description}>
+      <Article article={article} />;
+    </DefaultLayout>
+  );
 };
 
 export async function getStaticPaths() {
