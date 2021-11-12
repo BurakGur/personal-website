@@ -1,6 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import { locale, gtmId } from '../config';
 
 class MyDocument extends Document {
@@ -34,10 +32,8 @@ class MyDocument extends Document {
           />
         </Head>
         <body className="container">
-          <Header />
           <Main />
           <NextScript />
-          <Footer />
         </body>
       </Html>
     );
