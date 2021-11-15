@@ -3,7 +3,22 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gray: {
+          0: '#ffffff',
+          100: '#fafafa',
+          200: '#eaeaea',
+          300: '#888888',
+          400: '#666666',
+          500: '#555555',
+          600: '#444444',
+          700: '#333333',
+          800: '#222222',
+          900: '#111111'
+        }
+      }
+    },
     fontFamily: {
       sans: ['Inter', 'sans-serif']
     },
