@@ -2,17 +2,15 @@ import About from '../components/About';
 import ArticleList from '../components/ArticleList';
 import { fetchAPI } from '../lib/api';
 import generateRSS from '../lib/rss';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import DefaultLayout from '../layout/Default';
+import { description, title } from '../config';
 
 export default function Home({ articles }) {
   return (
-    <>
-      <Header />
+    <DefaultLayout title={title} description={description}>
       <About />
       <ArticleList articles={articles} />
-      <Footer />
-    </>
+    </DefaultLayout>
   );
 }
 

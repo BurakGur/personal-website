@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="flex items-center bg-gray-100 rounded-xl p-6">
+    <div className="flex items-center bg-gray-200 rounded-xl p-6">
       <img
         className="rounded-full mx-auto"
         src="/burak-gur.jpeg"
