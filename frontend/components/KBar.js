@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import { HomeLight, RssLight, AtLight, SunLight, MoonLight } from '../icons';
 
-function Kbd({ className, children }) {
+function Kbd({ children }) {
   return (
     <kbd className="px-1 py-0.5 inline-flex items-center justify-center select-none text-xs font-medium rounded text-gray-500 bg-gray-200 dark:text-gray-400 dark:bg-gray-700">
       {children}
@@ -23,7 +23,9 @@ function KbarItem({ action, handlers, state }) {
 
   return (
     <div
-      className="flex items-center rounded px-4 py-3 text-sm text-gray-500 cursor-pointer transition-all dark:text-gray-500"
+      className={`flex items-center rounded px-2 py-3 text-sm text-gray-500 rounded cursor-pointer transition-all dark:text-gray-500 ${
+        active && 'bg-gray-100 text-gray-800'
+      }`}
       {...handlers}
     >
       {action.icon}
@@ -158,11 +160,17 @@ function KBar({ children }) {
               <div className="text-sm font-medium text-gray-600 px-4 py-2">
                 Menü
               </div>
-              <KBarResults
-                onRender={(action, handlers, state) => (
-                  <KbarItem action={action} handlers={handlers} state={state} />
-                )}
-              />
+              <div className="px-2">
+                <KBarResults
+                  onRender={(action, handlers, state) => (
+                    <KbarItem
+                      action={action}
+                      handlers={handlers}
+                      state={state}
+                    />
+                  )}
+                />
+              </div>
             </div>
           </KBarAnimator>
         </KBarPositioner>
