@@ -1,3 +1,5 @@
+const { spacing } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -22,6 +24,59 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif']
     },
+    typography: theme => ({
+      DEFAULT: {
+        css: {
+          color: theme('colors.gray.700'),
+          a: {
+            color: theme('colors.pink.600'),
+            '&:hover': {
+              color: theme('colors.pink.700')
+            }
+          },
+          'h2,h3,h4': {
+            'scroll-margin-top': spacing[32],
+            'margin-top': spacing[6],
+            'margin-bottom': spacing[3],
+            fontWeight: theme('fontWeight.semibold')
+          },
+          h3: {
+            'font-size': theme('fontSize.xl')
+          },
+          p: {
+            'margin-bottom': theme('spacing.5')
+          },
+          pre: {
+            backgroundColor: theme('colors.gray.800'),
+            borderRadius: theme('borderRadius.lg'),
+            padding: theme('padding.4'),
+            'margin-top': theme('margin.6'),
+            'margin-bottom': theme('margin.6'),
+            fontSize: theme('fontSize.sm')
+          },
+          code: { color: theme('colors.pink.400') }
+        }
+      },
+      dark: {
+        css: {
+          color: theme('colors.gray.200'),
+          a: {
+            color: theme('colors.pink.400'),
+            '&:hover': {
+              color: theme('colors.pink.600')
+            }
+          },
+          blockquote: {
+            borderLeftColor: theme('colors.gray.700'),
+            color: theme('colors.gray.300')
+          },
+          'h2,h3,h4,p': {
+            color: theme('colors.gray.100'),
+            'scroll-margin-top': spacing[32]
+          }
+        }
+      }
+    }),
     container: theme => ({
       center: true,
       padding: theme('spacing.4'),
@@ -34,7 +89,7 @@ module.exports = {
     })
   },
   variants: {
-    extend: {}
+    typography: ['dark']
   },
   plugins: [require('@tailwindcss/typography')]
 };

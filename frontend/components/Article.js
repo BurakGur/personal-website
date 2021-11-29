@@ -12,7 +12,7 @@ const Article = ({ article }) => {
           {article.published_at}
         </Moment>
       </div>
-      <ReactMarkdown className="prose" skipHtml={false}>
+      <ReactMarkdown className="prose dark:prose-dark" skipHtml={false}>
         {article.content}
       </ReactMarkdown>
     </div>

@@ -29,13 +29,13 @@ function Footer() {
           </a>
         </div>
         <a href="/rss.xml" target="_blank">
-          <div className="text-sm flex items-center font-bold bg-gray-800 space-x-2 text-white border-gray-800 rounded px-2 py-1">
+          <div className="flex items-center bg-gray-700 hover:bg-gray-800 space-x-2 text-white transition-colors duration-200 border-gray-800 rounded px-2 py-1">
             <Rss
               width="14"
               height="14"
               className="transition-colors duration-200"
             />
-            <span>RSS</span>
+            <span className="text-sm font-bold">RSS</span>
           </div>
         </a>
       </div>
@@ -43,7 +43,7 @@ function Footer() {
         href="https://github.com/BurakGur/personal-website"
         target="_blank"
         rel="noreferrer"
-        className="text-gray-500 text-sm hover:text-gray-800 duration-200"
+        className="text-gray-500 text-sm hover:text-gray-800 duration-200 dark:text-gray-300"
       >
         Bu web sitesi açık kaynak kodlanmıştır ve kodlarına GitHub üzerinden
         ulaşabilirsiniz.
