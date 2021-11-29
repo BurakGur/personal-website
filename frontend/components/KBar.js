@@ -23,8 +23,8 @@ function KbarItem({ action, handlers, state }) {
 
   return (
     <div
-      className={`flex items-center rounded px-2 py-3 text-sm text-gray-500 rounded cursor-pointer transition-all dark:text-gray-500 ${
-        active && 'bg-gray-100 text-gray-800'
+      className={`flex items-center rounded px-2 py-3 text-sm text-gray-500 rounded cursor-pointer transition-all dark:text-gray-200 ${
+        active && 'bg-gray-100 dark:bg-gray-700'
       }`}
       {...handlers}
     >
@@ -48,7 +48,7 @@ function KbarItem({ action, handlers, state }) {
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="ml-auto opacity-30"
+          className="ml-auto opacity-50"
         >
           <polyline points="9 10 4 15 9 20" />
           <path d="M20 4v7a4 4 0 0 1-4 4H4" />
@@ -126,17 +126,17 @@ function KBar({ children }) {
       <KBarPortal>
         <KBarPositioner className="bg-white bg-opacity-40 dark:bg-black dark:bg-opacity-40">
           <KBarAnimator className="container w-full">
-            <div className="bg-white rounded-lg shadow-lg dark:bg-gray-900 pb-2 border-2 border-solid border-gray-100">
+            <div className="bg-white rounded-lg shadow-lg dark:bg-gray-900 pb-2 border-2 border-solid border-gray-100 dark:border-gray-800">
               <KBarSearch
                 placeholder="Ne yapmak istiyorsun?"
-                className="appearance-none rounded w-full py-5 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none rounded w-full py-5 rounded-none	dark:bg-gray-800 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:text-gray-200 dark:placeholder-gray-300"
               />
-              <div className="flex mb-2 border-0 border-t px-4 py-2 border-solid border-gray-200">
+              <div className="flex mb-2 border-0 border-t px-4 py-2 border-solid border-gray-200 dark:border-gray-800">
                 <div className="flex space-x-1 items-center">
                   <span className="text-gray-700 bg-gray-100 text-xs py-0.5 px-1.5 rounded">
                     <kbd className="font-medium">CMD + K</kbd>
                   </span>
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-gray-500 dark:text-gray-300">
                     ile menüyü açabilir,{' '}
                   </span>
                 </div>
@@ -144,7 +144,7 @@ function KBar({ children }) {
                   <span className="text-gray-700 bg-gray-100 text-sm py-0.5 px-1.5 rounded">
                     <kbd className="font-bold">&#8593; &#8595; </kbd>
                   </span>
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-gray-500 dark:text-gray-300">
                     ile menüde dolaşabilir ve
                   </span>
                 </div>
@@ -152,12 +152,12 @@ function KBar({ children }) {
                   <span className="text-gray-700 bg-gray-100 text-xs py-0.5 px-1.5 rounded">
                     <kbd className="font-sans">&#9166;</kbd>
                   </span>
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-gray-500 dark:text-gray-300">
                     ile aksiyon alabilirsin
                   </span>
                 </div>
               </div>
-              <div className="text-sm font-medium text-gray-600 px-4 py-2">
+              <div className="text-sm font-medium text-gray-600 px-4 py-2 dark:text-gray-300">
                 Menü
               </div>
               <div className="px-2">
