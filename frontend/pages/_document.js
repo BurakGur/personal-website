@@ -31,6 +31,9 @@ class MyDocument extends Document {
             `
             }}
           />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="apple-touch-icon" href="/icon.png"></link>
+          <meta name="theme-color" content="#DB2777" />
         </Head>
         <body className="container bg-gray-50 dark:bg-gray-900">
           <Main />

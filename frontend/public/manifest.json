@@ -1,0 +1,32 @@
+{
+    "theme_color": "#DB2777",
+    "background_color": "#111111",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "burakgur.com",
+    "short_name": "burakgur.com",
+    "description": "Burak G\u00fcr'\u00fcn Ki\u015fisel Blog sitesidir. JavaScript, motivasyon ve ki\u015fisel geli\u015fimle ilgilidir.",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
