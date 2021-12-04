@@ -6,7 +6,7 @@ const ArticlePage = ({ article }) => {
   const { title, description } = article;
   return (
     <DefaultLayout title={title} description={description}>
-      <Article article={article} />;
+      <Article article={article} />
     </DefaultLayout>
   );
 };
