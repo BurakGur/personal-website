@@ -1,5 +1,3 @@
-const { spacing } = require('tailwindcss/defaultTheme');
-
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -11,8 +9,8 @@ module.exports = {
           0: '#ffffff',
           100: '#f6f8fa',
           200: '#eaeaea',
-          300: '#888888',
-          400: '#666666',
+          300: '#999999',
+          400: '#777777',
           500: '#555555',
           600: '#444444',
           700: '#333333',
@@ -35,9 +33,8 @@ module.exports = {
             }
           },
           'h2,h3,h4': {
-            'scroll-margin-top': spacing[32],
-            'margin-top': spacing[6],
-            'margin-bottom': spacing[3],
+            'margin-top': theme('spacing.6'),
+            'margin-bottom': theme('spacing.3'),
             fontWeight: theme('fontWeight.semibold')
           },
           h3: {
@@ -71,8 +68,7 @@ module.exports = {
             color: theme('colors.gray.300')
           },
           'h2,h3,h4,p': {
-            color: theme('colors.gray.100'),
-            'scroll-margin-top': spacing[32]
+            color: theme('colors.gray.100')
           }
         }
       }

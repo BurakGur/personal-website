@@ -14,14 +14,9 @@ function Header() {
       <button
         onClick={query.toggle}
         type="button"
-        className="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-100
-        transition-colors duration-200"
+        className="text-gray-500 dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-900 transition"
       >
-        <Bars
-          className="transition-colors duration-200"
-          width="22"
-          height="22"
-        />
+        <Bars width="22" height="22" />
       </button>
     </header>
   );
