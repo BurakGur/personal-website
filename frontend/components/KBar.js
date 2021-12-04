@@ -124,7 +124,7 @@ function KBar({ children }) {
       }}
     >
       <KBarPortal>
-        <KBarPositioner className="bg-white bg-opacity-40 dark:bg-black dark:bg-opacity-40">
+        <KBarPositioner className="bg-white bg-opacity-80 dark:bg-black dark:bg-opacity-80">
           <KBarAnimator className="container w-full">
             <div className="bg-white rounded-lg shadow-lg dark:bg-gray-900 pb-2 border-2 border-solid border-gray-100 dark:border-gray-800">
               <KBarSearch
