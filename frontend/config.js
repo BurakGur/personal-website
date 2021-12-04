@@ -9,4 +9,4 @@ export const author = {
 export const title = 'burak gür.';
 export const description =
   "Burak Gür'ün Kişisel Blog sitesidir. JavaScript, motivasyon ve kişisel gelişimle ilgilidir.";
-export const metaImage = '';
+export const metaImage = `${url}/cover.png`;

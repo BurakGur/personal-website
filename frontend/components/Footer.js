@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Github, Rss, Twitter } from '../icons';
 
 function Footer() {
