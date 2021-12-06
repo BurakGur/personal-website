@@ -13,7 +13,7 @@ function ArticleList({ articles }) {
             <div className="text-3xl font-bold text-gray-700 dark:text-gray-100">
               {article.title}
             </div>
-            <div className="flex items-center text-sm space-x-3 text-gray-500 mt-1 dark:text-gray-200">
+            <div className="flex items-center text-sm space-x-3 text-gray-500 mt-1 dark:text-gray-300">
               <Moment format="Do MMMM YYYY" locale={locale}>
                 {article.published_at}
               </Moment>
