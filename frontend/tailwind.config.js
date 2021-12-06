@@ -44,15 +44,13 @@ module.exports = {
             'margin-bottom': theme('spacing.5')
           },
           pre: {
-            overflow: 'scroll',
-            backgroundColor: theme('colors.gray.800'),
+            backgroundColor: 'rgb(40, 44, 52)',
             borderRadius: theme('borderRadius.lg'),
             padding: theme('padding.4'),
             'margin-top': theme('margin.6'),
             'margin-bottom': theme('margin.6'),
             fontSize: theme('fontSize.sm')
-          },
-          code: { color: theme('colors.pink.400') }
+          }
         }
       },
       dark: {
