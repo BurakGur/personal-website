@@ -131,7 +131,7 @@ function KBar({ children }) {
                 placeholder="Ne yapmak istiyorsun?"
                 className="appearance-none rounded w-full py-5 rounded-none	dark:bg-gray-800 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:text-gray-200 dark:placeholder-gray-300"
               />
-              <div className="flex mb-2 border-0 border-t px-4 py-2 border-solid border-gray-200 dark:border-gray-800">
+              <div className="hidden md:flex mb-2 border-0 border-t px-4 py-2 border-solid border-gray-200 dark:border-gray-800">
                 <div className="flex space-x-1 items-center">
                   <span className="text-gray-700 bg-gray-100 text-xs py-0.5 px-1.5 rounded">
                     <kbd className="font-medium">CMD + K</kbd>

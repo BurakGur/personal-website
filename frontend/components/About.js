@@ -1,8 +1,8 @@
 function About() {
   return (
-    <div className="flex items-center bg-gray-200 rounded-xl p-6">
+    <div className="flex items-center bg-gray-200 rounded-xl p-3 md:p-6 md:flex-row flex-col">
       <img
-        className="rounded-full mx-auto"
+        className="rounded-full mx-auto mb-6 md:mt-0"
         src="/burak-gur.jpeg"
         alt="Burak Gür"
         width="112"

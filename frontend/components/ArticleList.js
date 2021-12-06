@@ -10,7 +10,7 @@ function ArticleList({ articles }) {
       {articles.map(article => (
         <Link href={`/${article.slug}`} key={article.id}>
           <div className="cursor-pointer">
-            <div className="text-3xl font-bold text-gray-700 dark:text-gray-100">
+            <div className="text-2xl md:text-3xl font-bold text-gray-700 dark:text-gray-100">
               {article.title}
             </div>
             <div className="flex items-center text-sm space-x-3 text-gray-500 mt-1 dark:text-gray-300">
@@ -20,7 +20,7 @@ function ArticleList({ articles }) {
               <span>•</span>
               <span>{timeToRead(article.content)} dakikalık okuma</span>
             </div>
-            <div className="text-lg mt-2 text-gray-600 dark:text-gray-200">
+            <div className="text-base md:text-lg mt-2 text-gray-600 dark:text-gray-200">
               {article.description}
             </div>
           </div>

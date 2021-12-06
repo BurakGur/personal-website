@@ -44,6 +44,7 @@ module.exports = {
             'margin-bottom': theme('spacing.5')
           },
           pre: {
+            overflow: 'scroll',
             backgroundColor: theme('colors.gray.800'),
             borderRadius: theme('borderRadius.lg'),
             padding: theme('padding.4'),
