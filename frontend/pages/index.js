@@ -15,7 +15,8 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  const articles = await fetchAPI('/articles');
+  const getArticles = await fetchAPI('/articles');
+  const articles = getArticles.reverse();
   await generateRSS(articles);
   return {
     props: { articles },
