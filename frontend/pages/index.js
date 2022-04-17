@@ -1,6 +1,6 @@
 import About from '../components/About';
 import ArticleList from '../components/ArticleList';
-import { fetchAPI } from '../lib/api';
+import { fetchStrapi } from '../lib/api';
 import generateRSS from '../lib/rss';
 import DefaultLayout from '../layout/Default';
 import { description, title } from '../config';
@@ -15,7 +15,7 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  const getArticles = await fetchAPI('/articles');
+  const getArticles = await fetchStrapi('/articles');
   const articles = getArticles.reverse();
   await generateRSS(articles);
   return {

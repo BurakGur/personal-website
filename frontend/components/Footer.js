@@ -2,7 +2,7 @@ import { Github, Rss, Twitter } from '../icons';
 
 function Footer() {
   return (
-    <footer className="my-10">
+    <footer className="mb-10 mt-4">
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center space-x-2">
           <div

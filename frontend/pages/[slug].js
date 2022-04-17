@@ -1,6 +1,6 @@
 import Article from '../components/Article';
 import DefaultLayout from '../layout/Default';
-import { fetchAPI } from '../lib/api';
+import { fetchStrapi } from '../lib/api';
 
 const ArticlePage = ({ article }) => {
   const { title, description } = article;
@@ -12,7 +12,7 @@ const ArticlePage = ({ article }) => {
 };
 
 export async function getStaticPaths() {
-  const articles = await fetchAPI('/articles');
+  const articles = await fetchStrapi('/articles');
 
   return {
     paths: articles.map(article => ({
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const articles = await fetchAPI(`/articles?slug=${params.slug}`);
+  const articles = await fetchStrapi(`/articles?slug=${params.slug}`);
   return {
     props: { article: articles[0] },
     revalidate: 1
