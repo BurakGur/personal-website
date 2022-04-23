@@ -1,4 +1,4 @@
-import { Github, Rss, Twitter } from '../icons';
+import { Github, Rss, Superpeer, Twitter } from '../icons';
 
 function Footer() {
   return (
@@ -29,6 +29,11 @@ function Footer() {
               width="32"
               height="32"
             />
+          </a>
+          <a href="https://superpeer.com/bg" target="_blank" rel="noreferrer">
+            <div className="flex items-center px-1 py-1 bg-gray-500 dark:bg-gray-300 text-white dark:text-gray-900 rounded hover:bg-gray-900 dark:hover:bg-gray-200 transition">
+              <Superpeer width="20" height="20" />
+            </div>
           </a>
         </div>
         <a href="/rss.xml" target="_blank">
