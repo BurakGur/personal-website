@@ -4,40 +4,54 @@
         <title>burak gür. - RSS Feed</title>
         <link>https://burakgur.com</link>
         <description>Burak Gür'ün Kişisel Blog sitesidir. JavaScript, motivasyon ve kişisel gelişimle ilgilidir.</description>
-        <lastBuildDate>Tue, 26 Oct 2021 20:11:44 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 17 May 2022 15:56:50 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Next.js</generator>
         <language>tr</language>
         <item>
-            <title><![CDATA[JavaScript’te empty slot nedir?]]></title>
-            <pubDate>Wed, 20 Oct 2021 14:57:39 GMT</pubDate>
-            <description><![CDATA[Bu yazımda sizlere empty slot, dense array ve sparse array kavramlarını basit bir şekilde anlatmaya çalışacağım.]]></description>
-            <content:encoded><![CDATA[JavaScript’te dizi (array) anlaşılması çok kolay gözükse de içerisinde bir çok detay barındıran bir veridir. Array için kısaca; “içerisinde birden fazla veri saklanmak için oluşturulan non-primitive (referans bazlı) veri tipidir.” diyebiliriz.
-Aşağıdaki gibi basit bir array oluşturalım:
+            <title><![CDATA[Odaklanma Becerisini Arttırma: Pürdikkat]]></title>
+            <pubDate>Sun, 17 Apr 2022 12:20:01 GMT</pubDate>
+            <description><![CDATA[Cal Newport'un Pürdikkat kitabıyla odaklanma konusunda kendimi geliştirmeyi umuyordum ve umduğum gibi de oldu. ]]></description>
+            <content:encoded><![CDATA[Kitap okuma alışkanlığım özellikle son birkaç senedir baya sekteye uğramış durumdaydı ve bu sene için koyduğum hedeflerin başında da bu alışkanlığı tekrar kazanmak vardı. Özellikle bu yılın ilk ayları iş yoğunluğundan yine fırsat bulamadım ama işleri rayına oturttuğumda boş vakitlerimin çoğunu tekrardan kitap okumaya ayırdım.
 
-```javascript
-const items = ['apple', 'orange', 'banana']
-```
+Bu sene ilk okuduğum kitap da Çay Kahve İnsan kanalında [Seyfeddin Başsaraç](https://youtu.be/czJqhwN7OlM?t=335)’tan duyduğum Cal Newport'un Pürdikkat kitabıydı. Bu kitap ile odaklanma konusunda kendimi geliştirmeyi umuyordum ve umduğum gibi de oldu.
 
-Oluşturduğumuz bu array dense array yani yoğun dizidir. Peki ya dense array ne demektir?
+Kitabın odak noktası ise aslında gündelik hayatta farketmeden birçok gereksiz şeye zaman harcamak ve çalışırken farkında olmadan bölünmek. Bunu şöyle açabiliriz; gündelik hayatta 9-6 çalışan bir insan aslında tüm zamanımı mesaide çalışarak geçirdiğini düşünüyor ama aslında öyle değil. 8 saat çalışan bir insanın bir günde kendine 16 saati kalıyor ve ortalama 8 saatini uyuyarak geçirdiğini düşünürsek aslında kendine hatrı sayılır bir zaman kalmış oluyor. Ama buradaki temel sıkıntı mesaideki zamandan sonraki kendimize ayırdığımız zamanı planlamadığımız için bu zamanı genellikle YouTube, WhatsApp, Instagram, Netflix gibi mecralarda yorgunluk çatısı altında gereksiz bir şekilde harcamamız. Temel düzeltilecek olan kısım da haliyle mesai saatleri dışındaki zamanımızı da planlamak oluyor.
 
-### Dense Array
-Dense array içerisinde herhangi bir boş alan (empty slot) olmadan tanımlanan array türüdür. Bu sefer de bir diğer soru geliyor: empty slot ne demektir peki?
+Kitabın bir diğer odak noktası da çalışırken çok bölünüp blok şeklinde çalışamamak. Kitapta bu konu hakkında ünlü yazarlardan ve MIT profesörlerinden bolca örnekler veriliyor ve başarılı olan çoğu kişinin başarısını bölünmeden 3-4 saat çalışması olarak gösteriliyor. Tabii ki bu 3-4 saat daha önce odaklı çalışmayanlar için uzun bir süre. Bu süreye ulaşmak için de odaklı çalışmayı benimsemek gerekiyor. Çalışırken bizi en çok bölen şeyler ise e-posta, toplantılar, internette gezinme, ekip içi mesajlaşma vs. diye gidiyor. Odaklı çalışmak için kişiyi bölen şeylerin engellemesi gerekir ve bu şekilde daha verimli çalışılınabilir.
 
-### Empty Slot
-Bir array içerisinde yer alan boş alanlardır. Bu boş alanlar genellikle tanımladığımız array içerisinde herhangi bir index değerine tanımlama yapmadan diğer bir index değerine tanımlama yaptığımız zaman oluşur. Bu ne demek peki? Hemen bir örnekle gösterelim:
+### Ben bunu nasıl uyguladım?
 
-```javascript
-const items = ['apple', 'orange', 'banana']
-items[8] = 'kiwi'
-```
+Odaklanma konusunda kendime güveniyordum fakat bir günümü detaylı bir şekilde incelediğimde hiç de öyle olmadığını farkettim. Aslında bu benim farkında olmadığım bir durumdu. Bu yüzden kitabı okumaya başlamamla birlikte aslında kendimi de gözlemliyordum ve durumun hiç de tahmin ettiğim gibi olmadığını farkettim. Çalışırken çok bölünüyordum ve neredeyse 30-45 dakikada bir gereksiz şeylere zaman ayırıyordum. Boş zamanlarımı da çok kötü kullandığımı fark ettim. Sırf 30 dakikalık bir boşluğum var diye bunu ya Netflix’te ya YouTube’da harcıyordum. Buna bir son vermem gerektiğini anladım ve harekete geçmeye karar verdim.
 
-Yukarıdaki örnekte ne yaptık. Normalde 0, 1, 2 şeklinde giden index değerinde 3. olarak değil de 8. index olarak ekledik. Yani arada kalan index değerlerine hiç bir şey eklemeden yani onları empty slot olarak bırakarak 8. index değerine tanımlama yaptık. Peki bu kodu yazdırırsak bize nasıl bir sonuç döndürecek?
+İlk olarak telefonumu düzenledim ve gereksiz tüm her şeyi sildim. iOS’te yer alan odak kısmını özellikle çalışırken aktif kullanıyorum. Arama hariç neredeyse tüm bildirimleri gizliyorum. Ayrıca aramalarda da bilinmeyen numaraları sessize al özellliğini kullanıyorum. Telefonda geçireceğim tüm vakti 10 dakika olsa bile kitaba ayırıyorum ve kitap okuyorum.
 
-Kodu yazdırdığımızda <5 empty items>kısmı, bizim boş alanlarımızı (empty slots) ifade etmektedir. Bu tarz içerisinde empty slot olan array türlerine de sparse array yani seyrek dizi diyoruz.
-Empty slots yani boş alanlar da tanımladığımız array içerisinde yer almaktadır fakat boştur. Yani biz tanımladığımız array değişkeninin içerisindeki eleman sayısını yazdırdığımızda 4 değil 9 sonucunu alırız.
+Çalışırken tüm sekmeleri ve müziği kapatıyorum ve rahatsız etme özelliğini de açıyorum. Böylelikle ekip içi mesaj gelse bile aslında o beni o an rahatsız etmiyor. Şu anda odaklı maksimum 1-1.5 saat çalışabiliyorum çünkü aslında çok yorucu bir iş. O yüzden odaklı çalıştığımda en çok zamanımı alacak işleri bu zaman diliminde yapıyorum çünkü daha verimli bir çalışma oluyor.
 
-Empty slot, dense array ve sparse array kavramlarından kısaca bahsettik. Umarım faydalı olmuştur.]]></content:encoded>
+Burada bir diğer nokta da artık şunu yapmayacağım dediğiniz şeyin yerine başka bir uğraş bulmaktır. Örnek veriyorum artık Instagram’da takılmayacağım dediniz, o zaman bunun yerine başka bir uğraş bulmak gerekiyor yoksa diğer türlü bir süre sonra kendinizi tekrar Instagram’da dolaşırken bulabilirsiniz.
+
+Pürdikkat kitabı benim hayatıma büyük bir katkısı oldu. Odaklanma sorunu yaşayanlara kesinlikle tavsiye ediyorum. Şimdi sırada Atomik Alışkanlıklar kitabı var.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Yeni kişisel web sitem yayında]]></title>
+            <pubDate>Tue, 22 Mar 2022 12:13:49 GMT</pubDate>
+            <description><![CDATA[Uzun zamandır aklımda olan ama iş yoğunluğundan dolayı bir türlü yenilemeye fırsat bulamadığım kişisel web sitemi sonunda yeniledim ve blog odaklı bir yapı haline getirdim.
+]]></description>
+            <content:encoded><![CDATA[Uzun zamandır aklımda olan ama iş yoğunluğundan dolayı bir türlü yenilemeye fırsat bulamadığım kişisel web sitemi sonunda yeniledim ve blog odaklı bir yapı haline getirdim.
+
+### Neden blog?
+
+Türkçe içeriğin yetersiz olmasından dolayı tecrübelerimi bir şekilde paylaşmak istiyordum ve bunun için YouTube, Medium gibi çeşitli mecraları düşünüyordum. Fakat dünyada da çokça örneği olduğu gibi ben de bir süre düşündükten sonra kişisel web sitem üzerinden paylaşmaya karar verdim. Bunun sebebi ise daha temiz ve daha modern bir arayüz ve teknolojiyle ilgili içerikleri paylaşmak ve ilk etapta biraz daha basit ilerlemek istemem.
+
+### Hangi teknolojiler kullanıldı?
+
+Ön tarafta React kütüphanesi olan **Next.js** ve arka tarafta ise hızlı api oluşturmak için birebir olan **Strapi**’yi kullandım. CSS kütüphanesi olarak da **Tailwind** kullandım. Next.js Vercel’de barınırken Strapi ise Heroku üzerinde barınıyor. Kişisel web sitemin tüm kaynak kodlarına da [GitHub](https://github.com/BurakGur/personal-website) üzerinden erişebilirsiniz.
+
+Ayrıca bu web sitesi; **SSR ve Static Export desteği, PWA (Progressive Web Apps) desteği, RSS altyapısı, Dark Mode, Kbar** ile kolay menü erişimi sunmaktadır.
+
+### Gelecekte neler olacak?
+
+Genel olarak JavaScript-kütüphanler de dahil- ve kişisel gelişim ile ilgili yazılar paylaşmayı planlıyorum. Ayrıca yazacağım yazıların ileride YouTube üzerinden videolarını da çekmeyi düşünüyorum.]]></content:encoded>
         </item>
     </channel>
 </rss>
