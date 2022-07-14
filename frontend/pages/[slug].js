@@ -12,7 +12,7 @@ const ArticlePage = ({ article }) => {
 };
 
 export async function getStaticPaths() {
-  const articles = await fetchStrapi('/articles');
+  const articles = await fetchStrapi('/articles?_sort=id:ASC');
 
   return {
     paths: articles.map(article => ({
