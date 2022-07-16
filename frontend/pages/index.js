@@ -15,7 +15,7 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  const getArticles = await fetchStrapi('/articles');
+  const getArticles = await fetchStrapi('/articles?_sort=id:ASC');
   const articles = getArticles.reverse();
   await generateRSS(articles);
   return {
