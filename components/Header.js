@@ -1,7 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { title } from '../config';
 import { Bars } from '../icons';
-import { useKBar } from 'components/KBar';
+import { useKBar } from 'kbar';
 
 function Header() {
   const { query } = useKBar();
@@ -12,7 +14,7 @@ function Header() {
         <Link href="/">{title}</Link>
       </div>
       <button
-        onClick={query.toggle}
+        onClick={() => query.toggle()}
         type="button"
         className="text-gray-500 dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-900 transition"
       >

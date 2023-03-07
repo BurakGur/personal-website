@@ -1,4 +1,5 @@
-export default function ErrorPage() {
+'use client';
+export default function Error() {
   return (
     <div className="my-20 text-center">
       <div className="text-9xl font-bold">

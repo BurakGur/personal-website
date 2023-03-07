@@ -1,3 +1,4 @@
+'use client';
 import { Github, Rss, Superpeer, Twitter } from '../icons';
 
 function Footer() {

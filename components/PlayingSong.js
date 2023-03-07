@@ -1,3 +1,5 @@
+'use client';
+
 import useSWR from 'swr';
 import { Spotify } from '../icons';
 import fetchApi from '../lib/api';

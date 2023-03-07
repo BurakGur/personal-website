@@ -1,12 +1,18 @@
 const withPWA = require('next-pwa');
+const { withContentlayer } = require('next-contentlayer');
 
-module.exports = withPWA({
-  reactStrictMode: true,
-  swcMinify: true,
-  pwa: {
-    dest: 'public',
-    register: true,
-    skipWaiting: true,
-    disable: process.env.NODE_ENV === 'development'
-  }
-});
+module.exports = withPWA(
+  withContentlayer({
+    reactStrictMode: true,
+    swcMinify: true,
+    pwa: {
+      dest: 'public',
+      register: true,
+      skipWaiting: true,
+      disable: process.env.NODE_ENV === 'development'
+    },
+    experimental: {
+      appDir: true
+    }
+  })
+);

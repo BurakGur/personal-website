@@ -5,7 +5,7 @@ import {
   KBarProvider,
   KBarResults,
   KBarSearch
-} from 'components/KBar';
+} from 'kbar';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import { HomeLight, RssLight, AtLight, SunLight, MoonLight } from '../icons';
