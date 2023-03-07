@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { url, metaImage } from './../config';
+import { url, metaImage } from '../config';
 
 function SEO({ title, description }) {
   const router = useRouter();

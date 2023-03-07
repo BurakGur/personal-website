@@ -9,7 +9,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "svgr": "svgr ./public/icons -d ./icons --svg-props 'className=' --svgo-config .svgr.json"
+    "svgr": "svgr public/icons -d ./icons --svg-props 'className=' --svgo-config .svgr.json"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",

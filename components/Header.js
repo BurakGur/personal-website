@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { title } from '../config';
 import { Bars } from '../icons';
-import { useKBar } from 'kbar';
+import { useKBar } from 'components/KBar';
 
 function Header() {
   const { query } = useKBar();
