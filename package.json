@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "clsx": "^1.2.1",
     "contentlayer": "^0.3.0",
     "feed": "^4.2.2",
     "framer-motion": "^10.9.1",

@@ -4,29 +4,94 @@ import Link from 'next/link';
 import { title } from '../config';
 import { Bars } from '../icons';
 import { useKBar } from 'kbar';
-import { motion } from 'framer-motion';
+import { LayoutGroup, motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
+import { useTheme } from 'next-themes';
+
+const navItems = {
+  '/': {
+    name: 'home'
+  },
+  '/about': {
+    name: 'about'
+  },
+  '/blog': {
+    name: 'blog'
+  },
+  '/guestbook': {
+    name: 'guestbook'
+  }
+};
 
 function Header() {
   const { query } = useKBar();
+  let pathname = usePathname() || '/';
+  if (pathname.includes('/blog/')) {
+    pathname = '/blog';
+  }
+
+  const { setTheme, theme } = useTheme();
+
+  console.log('theme', theme);
 
   return (
-    <header className="flex justify-between items-center my-10">
-      <motion.div
-        className="text-3xl font-bold text-pink-600"
-        animate={{
-          opacity: [0, 1],
-          x: [-20, 0]
-        }}
-      >
-        <Link href="/">{title}</Link>
-      </motion.div>
-      <button
-        onClick={() => query.toggle()}
-        type="button"
-        className="text-gray-500 dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-900 transition"
-      >
-        <Bars width="22" height="22" />
-      </button>
+    <header className="my-10">
+      <div className="flex flex-row justify-between items-center">
+        <motion.div
+          className="text-3xl font-bold text-pink-600"
+          animate={{
+            opacity: [0, 1],
+            x: [-20, 0]
+          }}
+        >
+          <Link href="/">{title}</Link>
+        </motion.div>
+        <button
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          type="button"
+          className="text-gray-500 dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-900 transition"
+        >
+          <Bars width="22" height="22" />
+        </button>
+      </div>
+      <LayoutGroup>
+        <nav className="flex flex-row fade overflow-auto scroll-pr-6" id="nav">
+          <div className="flex space-x-2 my-2">
+            {Object.entries(navItems).map(([path, { name }]) => {
+              const isActive = path === pathname;
+              return (
+                <Link
+                  key={path}
+                  href={path}
+                  className={clsx(
+                    'transition-all hover:bg-gray-200 flex align-middle',
+                    {
+                      'text-neutral-500': !isActive,
+                      'font-bold': isActive
+                    }
+                  )}
+                >
+                  <span className="relative">
+                    {name}
+                    {path === pathname ? (
+                      <motion.div
+                        className="absolute inset-0 bg-gray-200 rounded-md z-[-1]"
+                        layoutId="sidebar"
+                        transition={{
+                          type: 'spring',
+                          stiffness: 350,
+                          damping: 30
+                        }}
+                      />
+                    ) : null}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </nav>
+      </LayoutGroup>
     </header>
   );
 }

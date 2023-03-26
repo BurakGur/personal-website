@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css';
 import Footer from '../components/Footer';
 import PlayingSong from '../components/PlayingSong';
 import Header from '../components/Header';
+import { Providers } from './providers';
 
 export const metadata = {
   title: 'Next.js',
@@ -10,12 +11,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="container bg-gray-50 dark:bg-gray-900">
-        <Header />
-        {children}
-        <PlayingSong />
-        <Footer />
+    <html suppressHydrationWarning lang="en">
+      <body className="container bg-gray-100 dark:bg-gray-900">
+        <Providers>
+          <Header />
+          {children}
+          <PlayingSong />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
