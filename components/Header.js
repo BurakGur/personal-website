@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { title } from '../config';
-import { Bars } from '../icons';
+import { Sun, Moon } from 'icons';
 import { useKBar } from 'kbar';
 import { LayoutGroup, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
@@ -33,6 +33,8 @@ function Header() {
 
   const { setTheme, theme } = useTheme();
 
+  const ThemeIcon = theme === 'dark' ? Sun : Moon;
+
   console.log('theme', theme);
 
   return (
@@ -47,12 +49,13 @@ function Header() {
         >
           <Link href="/">{title}</Link>
         </motion.div>
+
         <button
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           type="button"
           className="text-gray-500 dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-900 transition"
         >
-          <Bars width="22" height="22" />
+          <ThemeIcon width="22px" height="22px" />
         </button>
       </div>
       <LayoutGroup>
