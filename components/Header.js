@@ -8,21 +8,7 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { useTheme } from 'next-themes';
 import { useMounted } from 'utils/hooks';
-
-const navItems = {
-  '/': {
-    name: 'home'
-  },
-  '/about': {
-    name: 'about'
-  },
-  '/blog': {
-    name: 'blog'
-  },
-  '/guestbook': {
-    name: 'guestbook'
-  }
-};
+import { navItems } from 'utils/constants';
 
 function Header() {
   const { theme, setTheme } = useTheme();
@@ -59,8 +45,8 @@ function Header() {
         )}
       </div>
       <LayoutGroup>
-        <nav className="flex flex-row fade overflow-auto scroll-pr-6" id="nav">
-          <div className="flex space-x-2 my-2">
+        <nav className="flex flex-row fade overflow-auto scroll-pr-3" id="nav">
+          <div className="flex space-x-3 my-4">
             {Object.entries(navItems).map(([path, { name }]) => {
               const isActive = path === pathname;
               return (
@@ -68,19 +54,18 @@ function Header() {
                   key={path}
                   href={path}
                   className={clsx(
-                    'transition-all hover:bg-gray-200 flex align-middle',
-                    {
-                      'text-neutral-500': !isActive,
-                      'font-bold': isActive
-                    }
+                    'transition-all hover:text-gray-900 dark:hover:text-gray-100 ',
+                    isActive
+                      ? 'text-gray-900 dark:text-gray-0'
+                      : 'text-gray-500 dark:text-gray-300'
                   )}
                 >
                   <span className="relative">
                     {name}
                     {path === pathname ? (
                       <motion.div
-                        className="absolute inset-0 bg-gray-200 rounded-md z-[-1]"
-                        layoutId="sidebar"
+                        className="absolute border-b-2 inset-0 z-[-1]"
+                        layoutId="menu"
                         transition={{
                           type: 'spring',
                           stiffness: 350,
