@@ -1,3 +1,4 @@
+import React from 'react';
 import 'tailwindcss/tailwind.css';
 import Footer from '../components/Footer';
 import PlayingSong from '../components/PlayingSong';
@@ -11,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning>
       <body className="container bg-gray-100 dark:bg-gray-900">
         <Providers>
           <Header />

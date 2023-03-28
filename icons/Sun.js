@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { themeTransition } from 'constants/transition';
@@ -24,6 +26,7 @@ const SunIcon = ({ width, height }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       whileTap={whileTap}
+      // Centers the rotation anchor point vertically & horizontally
       style={{ originX: '50%', originY: '50%', outline: 'none' }}
     >
       <motion.circle

@@ -3,11 +3,11 @@
 import Link from 'next/link';
 import { title } from '../config';
 import { Sun, Moon } from 'icons';
-import { useKBar } from 'kbar';
 import { LayoutGroup, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { useTheme } from 'next-themes';
+import { useMounted } from 'utils/hooks';
 
 const navItems = {
   '/': {
@@ -25,17 +25,15 @@ const navItems = {
 };
 
 function Header() {
-  const { query } = useKBar();
+  const { theme, setTheme } = useTheme();
+  const mounted = useMounted();
+
   let pathname = usePathname() || '/';
   if (pathname.includes('/blog/')) {
     pathname = '/blog';
   }
 
-  const { setTheme, theme } = useTheme();
-
   const ThemeIcon = theme === 'dark' ? Sun : Moon;
-
-  console.log('theme', theme);
 
   return (
     <header className="my-10">
@@ -50,13 +48,15 @@ function Header() {
           <Link href="/">{title}</Link>
         </motion.div>
 
-        <button
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          type="button"
-          className="text-gray-500 dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-900 transition"
-        >
-          <ThemeIcon width="22px" height="22px" />
-        </button>
+        {mounted && (
+          <button
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            type="button"
+            className="text-gray-500 dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-900 transition"
+          >
+            <ThemeIcon width="22px" height="22px" />
+          </button>
+        )}
       </div>
       <LayoutGroup>
         <nav className="flex flex-row fade overflow-auto scroll-pr-6" id="nav">
