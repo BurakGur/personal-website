@@ -20,7 +20,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif']
+      sans: ['var(--font-inter)'],
+      serif: ['var(--font-lora)']
     },
     typography: theme => ({
       DEFAULT: {

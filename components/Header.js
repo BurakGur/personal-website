@@ -33,7 +33,6 @@ function Header() {
         >
           <Link href="/">{title}</Link>
         </motion.div>
-
         {mounted && (
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

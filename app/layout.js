@@ -4,6 +4,19 @@ import Footer from '../components/Footer';
 import PlayingSong from '../components/PlayingSong';
 import Header from '../components/Header';
 import { Providers } from './providers';
+import { Inter, Lora } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap'
+});
+
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+  display: 'swap'
+});
 
 export const metadata = {
   title: 'Next.js',
@@ -12,7 +25,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html suppressHydrationWarning>
+    <html
+      suppressHydrationWarning
+      className={`${inter.variable} ${lora.variable}`}
+    >
       <body className="container bg-gray-100 dark:bg-gray-900">
         <Providers>
           <Header />
