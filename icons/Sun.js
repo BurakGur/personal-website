@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { themeTransition } from 'constants/transition';
+import { themeTransition } from 'utils/constants';
 
 const SunIcon = ({ width, height }) => {
   const whileTap = { scale: 0.95, rotate: 15 };

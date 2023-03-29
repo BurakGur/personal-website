@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { themeTransition } from 'constants/transition';
+import { themeTransition } from 'utils/constants';
 const MoonIcon = ({ width, height }) => {
   const variants = {
     initial: { scale: 0.6, rotate: 90 },
