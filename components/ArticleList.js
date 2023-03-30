@@ -6,6 +6,7 @@ import 'moment/locale/tr';
 import Link from 'next/link';
 import Moment from 'react-moment';
 import Balancer from 'react-wrap-balancer';
+import { dateToLocaleString } from 'utils/date';
 
 function ArticleList({ article }) {
   console.log('article: ', article);
@@ -16,9 +17,7 @@ function ArticleList({ article }) {
           <Balancer>{article.title}</Balancer>
         </div>
         <div className="flex items-center text-sm space-x-3 text-gray-500 mt-1 dark:text-gray-300">
-          <Moment format="Do MMMM YYYY" locale={locale}>
-            {new Date()}
-          </Moment>
+          <span>{dateToLocaleString(article.date)}</span>
           <span>•</span>
           <span>{timeToRead(article.body.raw)} dakikalık okuma</span>
         </div>

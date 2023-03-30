@@ -38,8 +38,9 @@ function CodeBlock({ children }) {
 const components = {
   Image: RoundedImage,
   a: CustomLink,
-  p: props => <p className="mb-4 dark:text-gray-200" {...props} />,
-  pre: CodeBlock
+  p: props => <p className="mb-6 dark:text-gray-200 text-base" {...props} />,
+  pre: CodeBlock,
+  h3: props => <h3 className="text-xl font-bold mb-2" {...props} />
 };
 
 export function Mdx({ code }) {
