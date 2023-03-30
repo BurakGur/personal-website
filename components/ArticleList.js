@@ -5,6 +5,7 @@ import { locale } from '../config';
 import 'moment/locale/tr';
 import Link from 'next/link';
 import Moment from 'react-moment';
+import Balancer from 'react-wrap-balancer';
 
 function ArticleList({ article }) {
   console.log('article: ', article);
@@ -12,7 +13,7 @@ function ArticleList({ article }) {
     <Link href={`/blog/${article.slug}`}>
       <div className="cursor-pointer">
         <div className="text-2xl md:text-2xl font-bold text-gray-700 dark:text-gray-100 font-serif">
-          {article.title}
+          <Balancer>{article.title}</Balancer>
         </div>
         <div className="flex items-center text-sm space-x-3 text-gray-500 mt-1 dark:text-gray-300">
           <Moment format="Do MMMM YYYY" locale={locale}>
