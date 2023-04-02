@@ -37,7 +37,7 @@ function Header() {
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             type="button"
-            className="text-gray-500 dark:text-gray-200 dark:hover:text-gray-100 hover:text-gray-900 transition"
+            className="text-gray-400 dark:text-gray-200 dark:hover:text-gray-100 hover:text-gray-900 transition"
           >
             <ThemeIcon width="22px" height="22px" />
           </button>
@@ -56,7 +56,7 @@ function Header() {
                     'transition-all hover:text-gray-900 dark:hover:text-gray-100 ',
                     isActive
                       ? 'text-gray-900 dark:text-gray-0'
-                      : 'text-gray-500 dark:text-gray-200'
+                      : 'text-gray-400 dark:text-gray-200'
                   )}
                 >
                   <span className="relative">

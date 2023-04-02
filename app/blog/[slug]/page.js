@@ -11,8 +11,13 @@ export async function generateStaticParams() {
   }));
 }
 
+export const metadata = {};
+
 export default async function Blog({ params }) {
   const post = allPosts.find(post => post.slug === params.slug);
+
+  metadata.title = post.title;
+  metadata.description = post.description;
 
   if (!post) {
     notFound();

@@ -1,10 +1,8 @@
-import Link from 'next/link';
 import { allPosts } from 'contentlayer/generated';
-import ArticleList from '../../components/ArticleList';
+import BlogListItem from 'components/BlogListItem';
 
 export const metadata = {
-  title: 'Blog',
-  description: 'Read my thoughts on software development, design, and more.'
+  title: 'blog - burak gür.'
 };
 
 export default async function BlogPage() {
@@ -18,7 +16,7 @@ export default async function BlogPage() {
           return 1;
         })
         .map(post => (
-          <ArticleList key={post.id} article={post} />
+          <BlogListItem key={post.id} article={post} className="flex mb-6" />
         ))}
     </section>
   );

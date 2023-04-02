@@ -1,19 +1,14 @@
-'use client';
-
 import { timeToRead } from '../lib/helpers';
-import { locale } from '../config';
 import 'moment/locale/tr';
 import Link from 'next/link';
-import Moment from 'react-moment';
 import Balancer from 'react-wrap-balancer';
 import { dateToLocaleString } from 'utils/date';
 
-function ArticleList({ article }) {
-  console.log('article: ', article);
+function BlogListItem({ article, ...props }) {
   return (
-    <Link href={`/blog/${article.slug}`}>
+    <Link href={`/blog/${article.slug}`} {...props}>
       <div className="cursor-pointer">
-        <div className="text-2xl md:text-2xl font-bold text-gray-700 dark:text-gray-100 font-serif">
+        <div className="text-2xl font-medium text-gray-700 dark:text-gray-100 font-serif">
           <Balancer>{article.title}</Balancer>
         </div>
         <div className="flex items-center text-sm space-x-3 text-gray-500 mt-1 dark:text-gray-300">
@@ -29,4 +24,4 @@ function ArticleList({ article }) {
   );
 }
 
-export default ArticleList;
+export default BlogListItem;

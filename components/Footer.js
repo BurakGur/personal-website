@@ -24,7 +24,7 @@ function Footer() {
               height="32"
             />
           </a>
-          <a href="https://twitter.com/BrkGur" target="_blank" rel="noreferrer">
+          <a href="https://twitter.com/gurbrk" target="_blank" rel="noreferrer">
             <Twitter
               className="text-gray-500 dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-900 transition"
               width="32"

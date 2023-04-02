@@ -11,26 +11,24 @@ export default function PlayingSong() {
       {data && (
         <>
           <Spotify width="24" height="24" />
-          <div className="inline-flex flex-col sm:flex-row w-full max-w-full truncate">
+          <div className="inline-flex flex-col sm:flex-row w-full max-w-full truncate text-gray-400 dark:text-gray-200">
             {data.isPlaying ? (
               <>
                 <a
-                  className="capsize text-gray-600 dark:text-gray-200 max-w-max truncate"
+                  className="capsize max-w-max truncate"
                   href={data.songUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {data.title}
                 </a>
-                <span className="mx-2 text-gray-400 dark:text-gray-200 hidden sm:block">
-                  {' – '}
-                </span>
-                <p className="text-gray-400 dark:text-gray-200 max-w-max truncate">
+                <span className="mx-2 hidden sm:block">{' – '}</span>
+                <p className=" max-w-max truncate">
                   {data?.artist || 'Spotify'}
                 </p>
               </>
             ) : (
-              <p className="text-gray-600 dark:text-gray-200">
+              <p className="text-gray-400 dark:text-gray-200">
                 Şu anda şarkı dinlemiyorum.
               </p>
             )}

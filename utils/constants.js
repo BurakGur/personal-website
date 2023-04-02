@@ -1,18 +1,12 @@
 export const navItems = {
   '/': {
-    name: 'home'
+    name: 'anasayfa'
   },
   '/about': {
-    name: 'about'
+    name: 'hakkımda'
   },
   '/blog': {
     name: 'blog'
-  },
-  '/portfolio': {
-    name: 'portfolio'
-  },
-  '/bookmarks': {
-    name: 'bookmarks'
   }
 };
 
