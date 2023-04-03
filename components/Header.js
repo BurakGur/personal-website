@@ -11,7 +11,7 @@ import { useMounted } from 'utils/hooks';
 import { navItems } from 'utils/constants';
 
 function Header() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const mounted = useMounted();
 
   let pathname = usePathname() || '/';
@@ -19,7 +19,7 @@ function Header() {
     pathname = '/blog';
   }
 
-  const ThemeIcon = theme === 'dark' ? Sun : Moon;
+  const ThemeIcon = resolvedTheme === 'dark' ? Sun : Moon;
 
   return (
     <header className="my-10">
@@ -35,7 +35,9 @@ function Header() {
         </motion.div>
         {mounted && (
           <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() =>
+              setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+            }
             type="button"
             className="text-gray-400 dark:text-gray-200 dark:hover:text-gray-100 hover:text-gray-900 transition"
           >
