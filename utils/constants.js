@@ -2,7 +2,7 @@ export const navItems = {
   '/': {
     name: 'anasayfa'
   },
-  '/about': {
+  '/hakkimda': {
     name: 'hakkımda'
   },
   '/blog': {

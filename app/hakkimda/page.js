@@ -6,14 +6,14 @@ export default function About() {
   return (
     <section>
       <h1 className="font-medium text-gray-900 mb-4 font-serif dark:text-gray-0 text-3xl">
-        About
+        Hakkımda
       </h1>
       <div className="text-gray-600 dark:text-gray-200 prose">
         <p>
           Ben Burak Gür, Türkiye`de yaşayan bir yazılım geliştiriciyim. Şu anda
           sahibinden.com şirketinde Senior Frontend Developer olarak
-          çalışmaktayım. JavaScript ve ekosistemine olan ilgim nedeniyle, bu
-          dilde yoğunlaşıyorum ve yeni teknolojileri denemeyi seviyorum.
+          çalışmaktayım. Genellikle JavaScript ve ekosisteminde çalışmalar
+          yapıyorum ve yeni teknolojileri denemeyi seviyorum.
         </p>
         <p>
           Ayrıca, boş zamanlarımda açık kaynaklı yazılım projelerinde geliştirme

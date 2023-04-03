@@ -43,7 +43,10 @@ const components = {
   Image: RoundedImage,
   a: CustomLink,
   p: props => (
-    <p className="mb-6 dark:text-gray-200 text-base" {...props}>
+    <p
+      className="mb-6 dark:text-gray-200 text-gray-500 leading-relaxed"
+      {...props}
+    >
       {props.children}
     </p>
   ),

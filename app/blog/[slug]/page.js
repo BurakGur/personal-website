@@ -24,15 +24,13 @@ export default async function Blog({ params }) {
 
   return (
     <section>
-      <h1 className="font-bold text-3xl font-serif max-w-[650px]">
+      <h1 className="font-bold text-3xl font-serif">
         <Balancer>{post.title}</Balancer>
       </h1>
-      <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-4 font-mono text-sm max-w-[650px]">
-        <div className="flex items-center text-sm text-gray-500 mt-1 dark:text-gray-300 mb-4">
-          {dateToLocaleString(post.date)}
-        </div>
-        <Mdx code={post.body.code} />
+      <div className="text-gray-600 mt-2 mb-6 dark:text-gray-200 text-sm">
+        {dateToLocaleString(post.date)}
       </div>
+      <Mdx code={post.body.code} />
     </section>
   );
 }
