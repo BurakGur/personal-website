@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "svgr": "svgr public/icons -d ./icons --svg-props 'className=' --svgo-config .svgr.json"
