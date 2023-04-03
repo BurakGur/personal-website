@@ -10,7 +10,7 @@ export default function About() {
       </h1>
       <div className="text-gray-600 dark:text-gray-200 prose">
         <p>
-          Ben Burak Gür, Türkiye'de yaşayan bir yazılım geliştiriciyim. Şu anda
+          Ben Burak Gür, Türkiye`de yaşayan bir yazılım geliştiriciyim. Şu anda
           sahibinden.com şirketinde Senior Frontend Developer olarak
           çalışmaktayım. JavaScript ve ekosistemine olan ilgim nedeniyle, bu
           dilde yoğunlaşıyorum ve yeni teknolojileri denemeyi seviyorum.

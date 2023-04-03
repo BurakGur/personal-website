@@ -1,6 +1,5 @@
 import { allPosts } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
-import { useMDXComponent } from 'next-contentlayer/hooks';
 import { Mdx } from '../../../components/Mdx';
 import Balancer from 'react-wrap-balancer';
 import { dateToLocaleString } from '../../../utils/date';

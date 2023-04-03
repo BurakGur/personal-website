@@ -15,10 +15,14 @@ const CustomLink = props => {
   }
 
   if (href.startsWith('#')) {
-    return <a {...props} />;
+    return <a {...props}> {props.children}</a>;
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
+  return (
+    <a target="_blank" rel="noopener noreferrer" {...props}>
+      {props.children}
+    </a>
+  );
 };
 
 function RoundedImage(props) {
@@ -38,9 +42,17 @@ function CodeBlock({ children }) {
 const components = {
   Image: RoundedImage,
   a: CustomLink,
-  p: props => <p className="mb-6 dark:text-gray-200 text-base" {...props} />,
+  p: props => (
+    <p className="mb-6 dark:text-gray-200 text-base" {...props}>
+      {props.children}
+    </p>
+  ),
   pre: CodeBlock,
-  h3: props => <h3 className="text-xl font-bold mb-2" {...props} />
+  h3: props => (
+    <h3 className="text-2xl font-bold mb-4" {...props}>
+      {props.children}
+    </h3>
+  )
 };
 
 export function Mdx({ code }) {
