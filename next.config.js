@@ -4,7 +4,7 @@ const { withContentlayer } = require('next-contentlayer');
 module.exports = withPWA(
   withContentlayer({
     reactStrictMode: false,
-    swcMinify: false,
+    swcMinify: true,
     pwa: {
       dest: 'public',
       register: true,
