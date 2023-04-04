@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "@upstash/redis": "^1.20.2",
     "@vercel/analytics": "^0.1.11",
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.0",
