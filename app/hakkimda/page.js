@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'hakkimda - burak gür.'
+  title: 'hakkımda'
 };
 
 export default function About() {

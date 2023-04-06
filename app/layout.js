@@ -5,7 +5,7 @@ import PlayingSong from '../components/PlayingSong';
 import Header from '../components/Header';
 import { Providers } from './providers';
 import { Inter, Lora } from 'next/font/google';
-import { description, title, locale } from 'config';
+import { description, title, locale, url, metaImage } from 'config';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,8 +20,30 @@ const lora = Lora({
 });
 
 export const metadata = {
-  title: title,
-  description: description
+  title: {
+    default: title,
+    template: '%s | ' + title
+  },
+  description: description,
+  openGraph: {
+    type: 'website',
+    locale: locale,
+    url: url,
+    siteName: title,
+    images: [
+      {
+        url: metaImage,
+        width: 1820,
+        height: 904
+      }
+    ]
+  },
+  twitter: {
+    cardType: 'summary_large_image'
+  },
+  icons: {
+    shortcut: '/favicon.ico'
+  }
 };
 
 export default function RootLayout({ children }) {

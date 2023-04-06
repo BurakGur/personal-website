@@ -2,7 +2,7 @@ import { allPosts } from 'contentlayer/generated';
 import BlogListItem from 'components/BlogListItem';
 
 export const metadata = {
-  title: 'blog - burak gür.'
+  title: 'blog'
 };
 
 export default async function BlogPage() {
