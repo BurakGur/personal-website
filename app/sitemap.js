@@ -1,6 +1,6 @@
 import { allPosts } from 'contentlayer/generated';
 import { url } from 'config';
-import { navItems } from '../utils/constants';
+import { navItems } from 'utils/constants';
 
 export default async function sitemap() {
   const posts = allPosts.map(post => ({
