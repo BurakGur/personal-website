@@ -16,7 +16,7 @@ export default async function BlogPage() {
           return 1;
         })
         .map(post => (
-          <BlogListItem key={post.id} article={post} className="flex mb-8" />
+          <BlogListItem key={post.id} article={post} className="mb-8 flex" />
         ))}
     </section>
   );

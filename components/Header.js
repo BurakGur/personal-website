@@ -23,7 +23,7 @@ function Header() {
 
   return (
     <header className="my-10">
-      <div className="flex flex-row justify-between items-center">
+      <div className="flex flex-row items-center justify-between">
         <motion.div
           className="text-3xl font-bold text-pink-600"
           animate={{
@@ -39,15 +39,15 @@ function Header() {
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
             }
             type="button"
-            className="text-gray-400 dark:text-gray-200 dark:hover:text-gray-100 hover:text-gray-900 transition"
+            className="text-gray-400 transition hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100"
           >
             <ThemeIcon width="22px" height="22px" />
           </button>
         )}
       </div>
       <LayoutGroup>
-        <nav className="flex flex-row fade overflow-auto scroll-pr-3" id="nav">
-          <div className="flex space-x-3 my-4">
+        <nav className="fade flex scroll-pr-3 flex-row overflow-auto" id="nav">
+          <div className="my-4 flex space-x-3">
             {Object.entries(navItems).map(([path, { name }]) => {
               const isActive = path === pathname;
               return (
@@ -65,7 +65,7 @@ function Header() {
                     {name}
                     {path === pathname ? (
                       <motion.div
-                        className="absolute border-b-2 inset-0 z-[-1]"
+                        className="absolute inset-0 z-[-1] border-b-2"
                         layoutId="menu"
                         transition={{
                           type: 'spring',

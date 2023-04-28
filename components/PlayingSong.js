@@ -7,11 +7,11 @@ import fetchApi from '../lib/api';
 export default function PlayingSong() {
   const { data } = useSWR('/api/spotify', fetchApi);
   return (
-    <div className="flex flex-row-reverse items-center sm:flex-row mt-10 space-x-0 sm:space-x-2 w-full">
+    <div className="mt-10 flex w-full flex-row-reverse items-center space-x-0 sm:flex-row sm:space-x-2">
       {data && (
         <>
           <Spotify width="24" height="24" />
-          <div className="inline-flex flex-col sm:flex-row w-full max-w-full truncate text-gray-400 dark:text-gray-200">
+          <div className="inline-flex w-full max-w-full flex-col truncate text-gray-400 dark:text-gray-200 sm:flex-row">
             {data.isPlaying ? (
               <>
                 <a

@@ -8,10 +8,10 @@ function BlogListItem({ article, ...props }) {
   return (
     <Link href={`/blog/${article.slug}`} {...props}>
       <div className="cursor-pointer">
-        <div className="text-2xl font-medium text-gray-700 dark:text-gray-100 font-serif">
+        <div className="font-serif text-2xl font-medium text-gray-700 dark:text-gray-100">
           <Balancer>{article.title}</Balancer>
         </div>
-        <div className="flex items-center text-sm space-x-3 text-gray-500 mt-1 dark:text-gray-300">
+        <div className="mt-1 flex items-center space-x-3 text-sm text-gray-500 dark:text-gray-300">
           <span>{dateToLocaleString(article.date)}</span>
           <span>•</span>
           <span>{timeToRead(article.body.raw)} dakikalık okuma</span>

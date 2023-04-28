@@ -32,7 +32,7 @@ function RoundedImage(props) {
 function CodeBlock({ children }) {
   return (
     <div className="prose dark:prose-dark">
-      <pre className="bg-neutral-100 dark:bg-neutral-900 rounded-lg p-4 my-8">
+      <pre className="my-8 rounded-lg bg-neutral-100 p-4 dark:bg-neutral-900">
         {children}
       </pre>
     </div>
@@ -44,7 +44,7 @@ const components = {
   a: CustomLink,
   p: props => (
     <p
-      className="mb-6 dark:text-gray-200 text-gray-500 leading-relaxed"
+      className="mb-6 leading-relaxed text-gray-500 dark:text-gray-200"
       {...props}
     >
       {props.children}
@@ -52,7 +52,7 @@ const components = {
   ),
   pre: CodeBlock,
   h3: props => (
-    <h3 className="text-2xl font-bold mb-4" {...props}>
+    <h3 className="mb-4 text-2xl font-bold" {...props}>
       {props.children}
     </h3>
   )

@@ -43,10 +43,10 @@ export default async function Blog({ params }) {
 
   return (
     <section>
-      <h1 className="font-bold text-3xl font-serif">
+      <h1 className="font-serif text-3xl font-bold">
         <Balancer>{post.title}</Balancer>
       </h1>
-      <div className="flex justify-between text-gray-300 mt-3 mb-6 dark:text-gray-300 text-sm">
+      <div className="mb-6 mt-3 flex justify-between text-sm text-gray-300 dark:text-gray-300">
         <span>{dateToLocaleString(post.date)}</span>
         <ViewCounter slug={post.slug} />
       </div>
