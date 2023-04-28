@@ -36,10 +36,15 @@ export const metadata = {
         width: 1820,
         height: 904
       }
-    ]
+    ],
+    description,
+    title
   },
   twitter: {
-    card: 'summary_large_image'
+    card: 'summary_large_image',
+    description,
+    image: metaImage,
+    title
   },
   icons: {
     shortcut: '/favicon.ico'
