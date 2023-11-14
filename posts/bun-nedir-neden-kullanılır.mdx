@@ -1,0 +1,42 @@
+---
+title: Bun Nedir? Neden Kullanılır?
+description: Bun bir JavaScript runtime, bundler, transpiler ve test runner'ıdır.
+date: 2023-11-14
+---
+
+Bun bir JavaScript runtime, bundler, transpiler ve test runner'ıdır. Tamamen sıfırdan geliştirilmiştir ve herhangi bir projeden fork edilip geliştirilmemiştir. Zig programlama diliyle yazılmıştır. Node alternatifi olarak çıkmıştır ve tüm Node AP'larıyla uyumludur. Ayrı NPM'i de destekler. V8 motoru yerine Safari için oluşturulan JavaScriptCore motorunu kullanmaktadır.
+
+#### Runtime nedir?
+JavaScript runtime, JavaScript kodunun çalıştırılmasını ve işlenmesini sağlayan bir ortam veya sistemdir. Örnek: Google Chrome, Safari, Node, Deno
+
+#### Bundler nedir?
+JavaScript bundler, birden çok JavaScript dosyasını ve bağımlılıklarını tek bir dosyada veya birkaç optimize edilmiş dosyada birleştirir (bundle). JavaScript bundler'ın temel amacı, web uygulamasının yüklenmesi ve çalışması için gerekli olan kaynakları optimize etmek ve düzenlemektir. Örnek: Webpack, Rollup, Parcel
+
+#### Transpiler nedir?
+JavaScript transpiler, bir JavaScript kodunu başka bir JavaScript sürümüne veya farklı bir dile dönüştüren bir araçtır. Genellikle, daha yeni JavaScript özelliklerini kullanarak yazılmış kodları eski JavaScript sürümleriyle uyumlu hale getirmek için kullanılır. Örneğin, Babel popüler bir JavaScript transpiler'ıdır. Babel, ES6, ES7 gibi yeni ECMAScript standartlarına uygun kodları alır ve onları daha eski tarayıcıların ve ortamların anlayabileceği ES5 JavaScript koduna dönüştürür.
+
+#### Ana Özellikleri
+Bun'ın 3 temel özelliği vardır. Bunlar sırasıyla;
+
+1. **Hız**: Node ve Deno'dan daha hızlı olup JavaScriptCore motorunu kullanmıştır ve minimum dependency barındırmaktadır.
+2. **Zarif API:** Minimal bir şekilde yüksek derecede optimize edilmiş performanslı bir API sağlar.
+3. **Bütünleşik Geliştirici Deneyimi:** Server ve client için komple bir araç setidir. Paket yöneticisi (package manager), test çalıştırıcısı (test runner) ve bundler dahildir.
+
+#### Özellikler ve Avantajları
+* Hız ve performansı Bun'ın en öne çıkan özelliğidir. Bun, Node ve Deno'ya göre çok daha hızlı çalışıyor. Basit bir console.log'u bile Node.js'e göre 4 kat hızlı çalıştırdığını iddia ediyor. Bir de TypeScript ile kullanıldığında neredeyse 40 kat daha hızlı olduğunu söylüyor.
+* Node ile tamamen uyumlu bir yapısı vardır ve Node ile oluşturulmuş projeler neredeyse tamamen (bir kaç eksik API hariç) Bun'da sorunsuz bir şekilde çalışmaktadır.
+* node_modules'lerle birlikte çalışır.
+* Native NPM Client'ı kullanmaktadır.
+* Bun'da CommonJS ve ESM kuralları, extension'lar ve package.json ayarlamaları gibi şeylere ihtiyaç yok. Tüm hepsi sorunsuz bir şekilde Bun'la birlikte çalışıyor. Hatta CommonJS ve ESM birlikte çalışabiliyor.
+* Web-standard API'lar (fetch, Request, Response, WebSocket, ReadableStream ve FormData gibi) sorunsuz çalışıyor.
+* JSX ve TypeScript desteği vardır. Herhangi bir paket yüklemeden kullanılabilir.
+* Kendi watch mode'u ve hot reloading'i vardır. `--watch` komutu ile değişiklikleri dinlemektedir ve `-- hot` ile de hot reloading yapmaktadır.
+* Enviroment Variables'lar herhangi bir dependency'e ihtiyaç duymadan çalışır.
+
+...gibi bir çok özellik ve avantaja sahiptir.
+
+Bu yazımda Bun'ı genel olarak anlattım. Bun ile ilgili bir sonraki yazımda Bun'ın nasıl kurulduğunu ve sunduğu API'ları inceleyeceğiz.
+
+> Kaynakça
+> https://www.youtube.com/watch?v=BsnCpESUEqM
+> https://bun.sh/docs
