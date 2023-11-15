@@ -91,7 +91,7 @@ const components = {
   },
   code: props => (
     <code
-      className="rounded-md bg-gray-500 p-1 text-gray-100 dark:bg-gray-200 dark:text-gray-500"
+      className="rounded-md bg-gray-500 p-1 text-gray-100 dark:bg-gray-100 dark:text-gray-500"
       {...props}
     >
       {props.children}
