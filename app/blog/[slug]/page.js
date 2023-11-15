@@ -30,6 +30,12 @@ export async function generateMetadata({ params }) {
           url: ogImage
         }
       ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      description,
+      image: ogImage,
+      title
     }
   };
 }
