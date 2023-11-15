@@ -1,42 +1,41 @@
 ---
 title: Bun Nedir? Neden Kullanılır?
-description: Bun bir JavaScript runtime, bundler, transpiler ve test runner'ıdır.
+description: Bun, JavaScript için bir runtime, paketleyici (bundler), dönüştürücü (transpiler) ve test çalıştırıcısıdır.
 date: 2023-11-14
 ---
 
-Bun bir JavaScript runtime, bundler, transpiler ve test runner'ıdır. Tamamen sıfırdan geliştirilmiştir ve herhangi bir projeden fork edilip geliştirilmemiştir. Zig programlama diliyle yazılmıştır. Node alternatifi olarak çıkmıştır ve tüm Node AP'larıyla uyumludur. Ayrı NPM'i de destekler. V8 motoru yerine Safari için oluşturulan JavaScriptCore motorunu kullanmaktadır.
+Bun, JavaScript için bir runtime, paketleyici (bundler), dönüştürücü (transpiler) ve test çalıştırıcısıdır. Tamamen sıfırdan geliştirilmiş, herhangi bir projeden türetilmemiştir. Yüksek performansının nedenlerinden biri olarak Zig programlama diliyle yazılmış olması gösteriliyor. Node.js'in bir alternatifi olarak ortaya çıkmış, tüm Node.js API'leriyle uyumlu ve NPM'i destekler. V8 motoru yerine Safari için geliştirilen JavaScriptCore motorunu kullanmaktadır.
 
-#### Runtime nedir?
-JavaScript runtime, JavaScript kodunun çalıştırılmasını ve işlenmesini sağlayan bir ortam veya sistemdir. Örnek: Google Chrome, Safari, Node, Deno
+#### Runtime Nedir?
+JavaScript runtime, JavaScript kodunun çalıştırılmasını ve işlenmesini sağlayan bir ortam veya sistemdir. Örnekler: Google Chrome, Safari, Node.js, Deno
 
-#### Bundler nedir?
-JavaScript bundler, birden çok JavaScript dosyasını ve bağımlılıklarını tek bir dosyada veya birkaç optimize edilmiş dosyada birleştirir (bundle). JavaScript bundler'ın temel amacı, web uygulamasının yüklenmesi ve çalışması için gerekli olan kaynakları optimize etmek ve düzenlemektir. Örnek: Webpack, Rollup, Parcel
+#### Bundler Nedir?
+JavaScript bundler, birden fazla JavaScript dosyasını ve bağımlılıklarını tek bir dosyada veya birkaç optimize edilmiş dosyada birleştirir. Web uygulamasının yüklenmesi ve çalışması için gerekli kaynakları optimize etmek ve düzenlemek amacıyla kullanılır. Örnekler: Webpack, Rollup, Parcel
 
-#### Transpiler nedir?
-JavaScript transpiler, bir JavaScript kodunu başka bir JavaScript sürümüne veya farklı bir dile dönüştüren bir araçtır. Genellikle, daha yeni JavaScript özelliklerini kullanarak yazılmış kodları eski JavaScript sürümleriyle uyumlu hale getirmek için kullanılır. Örneğin, Babel popüler bir JavaScript transpiler'ıdır. Babel, ES6, ES7 gibi yeni ECMAScript standartlarına uygun kodları alır ve onları daha eski tarayıcıların ve ortamların anlayabileceği ES5 JavaScript koduna dönüştürür.
+#### Transpiler Nedir?
+JavaScript transpiler, JavaScript kodunu başka bir sürüme veya dile dönüştüren bir araçtır. Genellikle, yeni JavaScript özellikleri kullanılarak yazılmış kodları eski sürümlerle uyumlu hale getirir. Örneğin, Babel, ES6 ve ES7 gibi yeni ECMAScript standartlarını daha eski tarayıcılar ve ortamlar için uyumlu ES5 JavaScript koduna dönüştürür.
 
 #### Ana Özellikleri
 Bun'ın 3 temel özelliği vardır. Bunlar sırasıyla;
 
-1. **Hız**: Node ve Deno'dan daha hızlı olup JavaScriptCore motorunu kullanmıştır ve minimum dependency barındırmaktadır.
-2. **Zarif API:** Minimal bir şekilde yüksek derecede optimize edilmiş performanslı bir API sağlar.
-3. **Bütünleşik Geliştirici Deneyimi:** Server ve client için komple bir araç setidir. Paket yöneticisi (package manager), test çalıştırıcısı (test runner) ve bundler dahildir.
+1. **Hız**: Node.js ve Deno'dan daha hızlı, JavaScriptCore motorunu kullanıyor ve minimum bağımlılık içeriyor.
+2. **API:** Yüksek performanslı, minimal ve optimize edilmiş bir API sağlar.
+3. **Bütünleşik Geliştirici Deneyimi:** Sunucu ve istemci için tam bir araç seti sunar; paket yöneticisi, test çalıştırıcısı ve paketleyici içerir.
 
 #### Özellikler ve Avantajları
-* Hız ve performansı Bun'ın en öne çıkan özelliğidir. Bun, Node ve Deno'ya göre çok daha hızlı çalışıyor. Basit bir console.log'u bile Node.js'e göre 4 kat hızlı çalıştırdığını iddia ediyor. Bir de TypeScript ile kullanıldığında neredeyse 40 kat daha hızlı olduğunu söylüyor.
-* Node ile tamamen uyumlu bir yapısı vardır ve Node ile oluşturulmuş projeler neredeyse tamamen (bir kaç eksik API hariç) Bun'da sorunsuz bir şekilde çalışmaktadır.
-* node_modules'lerle birlikte çalışır.
-* Native NPM Client'ı kullanmaktadır.
-* Bun'da CommonJS ve ESM kuralları, extension'lar ve package.json ayarlamaları gibi şeylere ihtiyaç yok. Tüm hepsi sorunsuz bir şekilde Bun'la birlikte çalışıyor. Hatta CommonJS ve ESM birlikte çalışabiliyor.
-* Web-standard API'lar (fetch, Request, Response, WebSocket, ReadableStream ve FormData gibi) sorunsuz çalışıyor.
-* JSX ve TypeScript desteği vardır. Herhangi bir paket yüklemeden kullanılabilir.
-* Kendi watch mode'u ve hot reloading'i vardır. `--watch` komutu ile değişiklikleri dinlemektedir ve `--hot` ile de hot reloading yapmaktadır.
-* Enviroment Variables'lar herhangi bir dependency'e ihtiyaç duymadan çalışır.
+* Bun, Node.js ve Deno'ya göre çok daha hızlıdır. Basit bir console.log işlemini bile Node.js'ten 4 kat daha hızlı çalıştırdığı iddia ediliyor. TypeScript ile kullanıldığında ise yaklaşık 40 kat daha hızlı olduğu belirtiliyor.
+* Node.js ile tam uyumludur ve Node.js ile oluşturulan projeler, birkaç eksik API hariç, Bun'da sorunsuz çalışır.
+* `node_modules` ile uyumlu çalışır ve yerel NPM istemcisini kullanır.
+* Bun, CommonJS ve ESM kuralları, uzantılar ve package.json ayarları gibi özelliklerle uyumludur; hatta CommonJS ve ESM birlikte çalışabilir.
+* Web standartlarındaki API'lar (fetch, Request, Response, WebSocket, ReadableStream, FormData vb.) sorunsuz çalışır.
+* JSX ve TypeScript desteği sunar; ek paket yüklemeye gerek yoktur.
+* Kendi watch modu ve hot reloading özelliklerine sahiptir. `--watch` komutu ile değişiklikleri izler ve `--hot` ile sıcak yeniden yükleme yapar.
+* Ortam değişkenleri (Environment Variables), herhangi bir bağımlılık olmadan çalışır.
 
 ...gibi bir çok özellik ve avantaja sahiptir.
 
 Bu yazımda Bun'ı genel olarak anlattım. Bun ile ilgili bir sonraki yazımda Bun'ın nasıl kurulduğunu ve sunduğu API'ları inceleyeceğiz.
 
 > **Kaynakça**
-> - https://www.youtube.com/watch?v=BsnCpESUEqM
-> - https://bun.sh/docs
+> - [https://www.youtube.com/watch?v=BsnCpESUEqM](https://www.youtube.com/watch?v=BsnCpESUEqM)
+> - [https://bun.sh/docs](https://bun.sh/docs)
