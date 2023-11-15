@@ -20,6 +20,7 @@ const lora = Lora({
 });
 
 export const metadata = {
+  metadataBase: new URL('/', url).toString(),
   title: {
     default: title,
     template: '%s | ' + title
