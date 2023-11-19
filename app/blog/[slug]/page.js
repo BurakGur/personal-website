@@ -16,10 +16,14 @@ export async function generateMetadata({ params }) {
   const post = allPosts.find(post => post.slug === params.slug);
   const { title, description, slug } = post;
   const ogImage = `${url}/api/og?title=${title}`;
-  return {
-    title: title,
-    description: description,
 
+  if (!post) {
+    return;
+  }
+
+  return {
+    title,
+    description,
     openGraph: {
       title,
       description,
@@ -33,9 +37,9 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
+      title,
       description,
-      image: ogImage,
-      title
+      images: [ogImage]
     }
   };
 }
