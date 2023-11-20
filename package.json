@@ -11,7 +11,7 @@
     "svgr": "svgr public/icons -d ./icons --svg-props 'className=' --svgo-config .svgr.json"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.10",
     "@upstash/redis": "^1.20.2",
     "@vercel/analytics": "^0.1.11",
     "@vercel/og": "^0.5.1",

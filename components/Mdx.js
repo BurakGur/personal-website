@@ -32,9 +32,7 @@ function RoundedImage(props) {
 function CodeBlock({ children }) {
   return (
     <div className="prose dark:prose-dark">
-      <pre className="my-8 rounded-lg bg-neutral-100 p-4 dark:bg-neutral-900">
-        {children}
-      </pre>
+      <pre className="my-8 rounded-lg bg-gray-500 p-4">{children}</pre>
     </div>
   );
 }
@@ -90,10 +88,7 @@ const components = {
     );
   },
   code: props => (
-    <code
-      className="rounded-md bg-gray-500 p-1 text-gray-100 dark:bg-gray-100 dark:text-gray-500"
-      {...props}
-    >
+    <code className="rounded-md text-gray-900 dark:text-gray-100" {...props}>
       {props.children}
     </code>
   )
