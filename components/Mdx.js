@@ -32,7 +32,9 @@ function RoundedImage(props) {
 function CodeBlock({ children }) {
   return (
     <div className="prose dark:prose-dark">
-      <pre className="my-8 rounded-lg bg-gray-500 p-4">{children}</pre>
+      <pre className="my-8 overflow-x-scroll rounded-lg bg-gray-500 p-4 no-scrollbar">
+        {children}
+      </pre>
     </div>
   );
 }
