@@ -28,7 +28,7 @@ JavaScript'te değişken tanımlamak için üç ana yol vardır: `var`, `let` ve
 JavaScript'te, yukarıda da bahsettiğimiz gibi yukarıdan aşağı doğru okunur. Bu yüzden değişken tanımlamalarımızda ilk tanımlayıp ardından kullanırız. Tam tersini yaptığımızda ise hata alırız:
 
 ```javascript
-console.log(name); // Uncaught ReferenceError: name is not defined
+console.log(name); // ReferenceError: Cannot access 'name' before initialization
 
 const name = "Burak"; // veya let ile tanımlanabilir
 ```
@@ -44,6 +44,8 @@ var name = "Burak";
 Nasıl oldu da `const` ve `let`'te `ReferenceError` hatası verdi de `var` kullandığımızda `undefined` yazdı?
 
 Bunu cevabı JavaScript'te hoisting kavramıdır. Hoisting, değişkenlerin ve fonksiyon tanımlarının kendi kapsamının en üstüne "çekilmiş" (hoist) gibi davranmasını ifade eder. Hoisting JavaScript yorumlayıcısının bir kod parçasını çalıştırmadan önce değişken ve fonksiyon tanımlamalarını önceden okuyup kapsamın başına taşıması işlemidir.
+
+Aslında `let` ve `const` da hoist edilir fakat `Temporal Dead Zone` (TDZ) nedeniyle `ReferenceError` verir. Yani JavaScript'in değişkenin varlığını biliyor olmasına rağmen, henüz başlatılmadığı ve kullanıma hazır olmadığı anlamına gelir. Eğer hoisted edilmeseydi şu hatayı alacaktı: `ReferenceError: name is not defined` onun yerine şu hatayı alıyoruz: `ReferenceError: Cannot access 'name' before initialization`
 
 Yani `var` kullandığımızda JavaScript aslında şu şekilde yorumlar:
 
@@ -72,28 +74,25 @@ Bu durum fonksiyonlar için de geçerlidir. Eğer fonksiyon tanımlanmışsa (fu
 console.log(getHi()); // Çalışır ve Hi! döner
 
 function getHi() {
-	return 'Hi!'
-}
+    return 'Hi!'}
 ```
 
 ```javascript
 console.log(getHi()); // TypeError: getHi is not a function
 
 var getHi = function() {
-	return 'Hi!'
-}
+    return 'Hi!'}
 ```
 
 ```javascript
 console.log(getHi()); // TypeError: getHi is not defined
 
 const getHi = () => {
-	return 'Hi!'
-}
+    return 'Hi!'}
 ```
 
 ### Sonuç
 
 Hoisting, JavaScript'in çalışma mantığını anlamak için önemlidir. Çünkü bu çalışma mantığını anlamak, beklenmedik hataların ve kafa karışıklıklarının da önüne geçmeye yardımcı olacaktır.
 
-`var` ile tanımlanan değişkenler, tanımlandıkları kapsamın en üstüne "çekilir" (hoisted). Bu, bazen beklenmeyen hatalara ve karmaşık durumlara yol açabilir. Ancak, `let` ve `const` ile tanımlanan değişkenlerde bu tür bir hoisting davranışı yoktur, bu da kodun daha anlaşılır ve yönetilebilir olmasını sağlar.
+`var` ile tanımlanan değişkenler, tanımlandıkları kapsamın en üstüne "çekilir" (hoisted). Bu, bazen beklenmeyen hatalara ve karmaşık durumlara yol açabilir. Ancak, `let` ve `const` ile tanımlanan değişkenlerde Temporal Dead Zone nedeniyle hata verir, bu da aslında kodun daha anlaşılır ve yönetilebilir olmasını sağlar.
