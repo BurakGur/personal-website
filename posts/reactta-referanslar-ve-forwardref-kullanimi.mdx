@@ -1,0 +1,111 @@
+---
+title: React'ta Referanslar ve forwardRef Kullanımı
+description: React'ta, UI değişikliklerini genellikle state ve props ile yönetiriz. Ancak, bazen DOM'a veya React elemanına doğrudan erişmemiz gerekebilir.
+date: 2023-12-04
+---
+
+React'ta, UI değişikliklerini genellikle state ve props ile yönetiriz. Ancak, bazen DOM'a veya React elemanına doğrudan erişmemiz gerekebilir. İşte bu tür durumlarda referansları kullanırız.
+
+### İmperatif ve Deklaratif Yaklaşım
+İmperatif programlama, adım adım yapılması gerekenleri belirtirken, deklaratif yaklaşımda geliştiriciler sadece sonucu tanımlar ve bu sonuca ulaşmak için gerekli adımlar kendi içinde yönetilir. React'ın deklaratif yaklaşımı, özellikle büyük ve karmaşık kullanıcı arayüzleri için büyük bir avantaj sağlar, çünkü uygulamaları daha öngörülebilir ve yönetilebilir hale getirir.
+
+İmperatif ve deklaratif yaklaşımı daha iyi anlamak için ufak bir kod örneği yapalım:
+
+```javascript
+// IMPERATIF YAKLAŞIM
+
+// HTML
+<button id="myButton">Tıkla Beni</button>
+<div id="message"></div>
+
+// JavaScript
+document.getElementById('myButton').addEventListener('click', function() {
+    var messageElement = document.getElementById('message');
+    messageElement.innerText = 'Merhaba, düğmeye tıkladınız!';
+});
+```
+
+```javascript
+// DEKLARATIF YAKLAŞIM
+
+import React, { useState } from 'react';
+
+function MyComponent() {
+    // useState hook'u ile component'in durumunu (state) yönetiyoruz
+    const [showMessage, setShowMessage] = useState(false);
+
+    // Düğmeye tıklandığında çağrılacak fonksiyon
+    const handleClick = () => {
+        setShowMessage(true);
+    };
+
+    return (
+        <div>
+            <button onClick={handleClick}>Tıkla Beni</button>
+            {showMessage && <div>Merhaba, düğmeye tıkladınız!</div>}
+        </div>
+    );
+}
+
+export default MyComponent;
+```
+
+### Reference (Referans) Nedir?
+
+React'ta bir "reference" (referans), DOM düğümlerine veya React elementlerine doğrudan erişim sağlamak için kullanılan bir mekanizmadır. React'ın deklaratif yaklaşımı nedeniyle, UI'daki değişiklikleri genellikle state ve props'larla yaparız. Ancak, bazen DOM'a doğrudan erişmek veya bir React component'inin örnek metodlarını çağırmak gerekebilir. İşte bu gibi durumlarda referanslar devreye girer.
+
+```javascript
+import React, { useRef, useEffect } from 'react';
+
+function MyInput() {
+    // useRef Hook'u ile bir referans oluşturuyoruz
+    const inputRef = useRef();
+
+    useEffect(() => {
+        // Component yüklendiğinde input alanına otomatik olarak odaklanıyoruz
+        inputRef.current.focus();
+    }, []); // Boş bağımlılık dizisi, useEffect'in sadece component yüklendiğinde çalışmasını sağlar
+
+    return (
+        <div>
+            <input ref={inputRef} type="text" />
+            <button onClick={() => inputRef.current.focus()}>
+	            Focus to Input
+            </button>
+        </div>
+    );
+}
+
+export default MyInput;
+```
+
+Burada `useRef` hook'u ile bir referans oluşturup input'un içerisinde `ref={inputRef}` şeklinde tanımlayarak bu referans'ı input'a bağlıyoruz. Ardından da `inputRef.current` ile ilgili elemente ulaşabiliyoruz. Burada `.current` kullanılmasının sebebi React'ın ref'i nasıl yönettiğiyle ilgilidir. Çünkü aslında elementi `current` içerisinde tutar ve her değişiklikte burayı günceller.
+
+### Peki ya forwardRef nedir?
+`forwardRef`, oluşturulan referansları alt component'lere aktarmak için kullanılan bir mekanizmadır. Referanslar, doğrudan DOM elemanlarıyla ve class component'leriyle ilişkilendirilirken, functional component'lerde doğrudan bir ilişki kurulamaz. Bu sınırlandırmayı aşmak için `forwardRef` kullanılır.
+
+```javascript
+import React, { forwardRef } from 'react';
+
+const MyInput = forwardRef((props, ref) => (
+  <input ref={ref} {...props} />
+));
+
+// Üst bileşende kullanımı
+const MyComponent = () => {
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus(); // Input'a programatik olarak odaklanma
+  }, []);
+
+  return <MyInput ref={inputRef} type="text" />;
+}
+```
+
+forwardRef iki parametre alır. Bunlar `props` ve `ref`'tir. Böylelikle kullanılan yerde hem prop'ların hem de ref'in kullanılmasını sağlar. Böylece ref'i de parent component'ten child component'e gönderebiliriz.
+### Sonuç
+React'ta referans kullanımı, özellikle karmaşık etkileşimler ve DOM manipülasyonları için faydalı olabilir. Ancak, React ekibi, referans kullanımını mümkün olduğunca sınırlı tutmayı öneriyor. Aşırı veya yanlış kullanım, React'ın deklaratif yapısını bozabilir ve uygulamanın bakımını zorlaştırabilir.
+
+
+
