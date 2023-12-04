@@ -22,10 +22,11 @@ export default async function handler(request) {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            justifyContent: 'flex-end',
             paddingLeft: '120px',
             paddingRight: '120px',
-            paddingTop: '160px',
+            paddingTop: '240px',
+            paddingBottom: '240px',
             height: '100%',
             width: '100%',
             backgroundImage: 'url(https://burakgur.com/og.png)'
