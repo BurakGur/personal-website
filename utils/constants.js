@@ -7,6 +7,9 @@ export const navItems = {
   },
   '/blog': {
     name: 'blog'
+  },
+  '/araclar': {
+    name: 'araçlar'
   }
 };
 
