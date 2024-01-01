@@ -29,7 +29,7 @@ export default function PlayingSong() {
               </>
             ) : (
               <p className="text-gray-400 dark:text-gray-200">
-                Şu anda şarkı dinlemiyorum.
+                Şu anda müzik dinlemiyorum.
               </p>
             )}
           </div>
