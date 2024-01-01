@@ -22,6 +22,7 @@ export default function Tools() {
           <li>Editor: WebStorm</li>
           <li>Theme: GitHub Dark</li>
           <li>Terminal: iTerm2</li>
+          <li>Font: Monaspace Neon</li>
         </ul>
         <h4 className="font-medium">Uygulamalar</h4>
         <ul className="list-inside list-disc leading-7">
