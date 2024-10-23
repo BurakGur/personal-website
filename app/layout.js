@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${lora.variable}`}
       lang={locale}
     >
-      <body className="container bg-white dark:bg-black">
+      <body className="container bg-white dark:bg-[#171717]">
         <Providers>
           <Header />
           {children}
