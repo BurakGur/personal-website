@@ -1,7 +1,7 @@
 function About() {
   return (
     <section>
-      <h1 className="mb-4 font-serif text-2xl font-medium text-gray-900 dark:text-gray-0">
+      <h1 className="mb-4 font-serif text-2xl font-medium text-gray-900 dark:text-white">
         Merhaba, ben Burak.
       </h1>
       <p className="mb-4 text-gray-400 dark:text-gray-200">

@@ -44,7 +44,7 @@ const components = {
   a: CustomLink,
   p: props => (
     <p
-      className="mb-6 leading-relaxed text-gray-500 dark:text-gray-200"
+      className="mb-6 leading-relaxed text-gray-500 dark:text-gray-300"
       {...props}
     >
       {props.children}

@@ -5,10 +5,10 @@ export const metadata = {
 export default function About() {
   return (
     <section>
-      <h1 className="dark:text-gray-0 mb-4 font-serif text-3xl font-medium text-gray-900">
+      <h1 className="mb-4 font-serif text-3xl font-medium text-gray-900 dark:text-white">
         About me.
       </h1>
-      <div className="prose text-gray-600 dark:text-gray-200">
+      <div className="prose text-gray-600 dark:text-gray-400">
         <p>
           I'm Burak Gür, a software developer living in Turkey. Currently, I
           work as a Sr. Frontend Engineer at Hepsiburada. I primarily work with
