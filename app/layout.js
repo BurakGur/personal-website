@@ -1,7 +1,6 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
 import Footer from '../components/Footer';
-import PlayingSong from '../components/PlayingSong';
 import Header from '../components/Header';
 import { Providers } from './providers';
 import { Inter, Lora } from 'next/font/google';
@@ -59,11 +58,10 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${lora.variable}`}
       lang={locale}
     >
-      <body className="container bg-gray-100 dark:bg-gray-900">
+      <body className="container bg-white dark:bg-black">
         <Providers>
           <Header />
           {children}
-          <PlayingSong />
           <Footer />
         </Providers>
       </body>

@@ -57,15 +57,15 @@ function Header() {
                   className={clsx(
                     'transition-all hover:text-gray-900 dark:hover:text-gray-100 ',
                     isActive
-                      ? 'text-gray-900 dark:text-gray-0'
-                      : 'text-gray-400 dark:text-gray-200'
+                      ? 'text-gray-700 dark:text-white'
+                      : 'text-gray-500 dark:text-zinc-400'
                   )}
                 >
                   <span className="relative">
                     {name}
                     {path === pathname ? (
                       <motion.div
-                        className="absolute inset-0 z-[-1] border-b-2"
+                        className="absolute inset-0 z-[-1] border-b-2 border-gray-700 dark:border-white"
                         layoutId="menu"
                         transition={{
                           type: 'spring',

@@ -5,22 +5,6 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
-    extend: {
-      colors: {
-        gray: {
-          0: '#ffffff',
-          100: '#fcfcfc',
-          200: '#a0a0a0',
-          300: '#707070',
-          400: '#505050',
-          500: '#343434',
-          600: '#2e2e2e',
-          700: '#232323',
-          800: '#1c1c1c',
-          900: '#171717'
-        }
-      }
-    },
     fontFamily: {
       sans: ['var(--font-inter)'],
       serif: ['var(--font-lora)']
