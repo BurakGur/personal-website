@@ -13,7 +13,7 @@ function Footer() {
         <IconButton href="/rss.xml" title="rss" />
       </div>
       <div className="mt-6 text-center text-xs text-gray-400 dark:text-gray-600">
-        This website is open-source, and you can access its code on{' '}
+        This website is open-source and you can access its code on{' '}
         <a
           href="https://github.com/BurakGur/personal-website"
           target="_blank"
