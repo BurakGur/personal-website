@@ -47,7 +47,7 @@ function Header() {
       </div>
       <LayoutGroup>
         <nav className="fade flex scroll-pr-3 flex-row overflow-auto" id="nav">
-          <div className="my-4 flex space-x-3">
+          <div className="mt-4 flex space-x-3">
             {Object.entries(navItems).map(([path, { name }]) => {
               const isActive = path === pathname;
               return (
