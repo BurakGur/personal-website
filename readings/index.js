@@ -1,10 +1,18 @@
 const books = [
   {
+    title: 'Incognito',
+    author: 'David Eagleman',
+    notes: '',
+    weekTime: [4],
+    status: 'reading'
+  },
+  {
     title: 'Nexus',
     author: 'Yuval Noah Harari',
-    notes: '',
+    notes:
+      'We often think of history as something lived by those before us, yet each day we experience is also part of history. Nexus brilliantly reflects this, offering a fascinating perspective on the technological advances that have shaped our journey to the present. It questions the scope of artificial intelligence in a compelling way and provides a thought-provoking glimpse into our near future.',
     weekTime: [3],
-    status: 'reading'
+    status: 'done'
   },
   {
     title: 'The Power of Habit',
