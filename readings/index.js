@@ -1,10 +1,34 @@
 const books = [
   {
+    title: 'Glucose Revolution',
+    author: 'Jessie Inchauspe',
+    notes: '',
+    weekTime: [7],
+    status: 'reading'
+  },
+  {
+    title: 'Wabi Sabi: The Wisdom in Imperfection',
+    author: 'Nobuo Suzuki',
+    notes:
+      'I’ve always admired Japanese culture and their unique perspective on life. This was the first book I picked up to delve deeper into that admiration. It beautifully captures the essence of the Wabi Sabi philosophy.',
+    weekTime: [6],
+    status: 'done'
+  },
+  {
+    title: 'Why We Sleep',
+    author: 'Matthew Walker',
+    notes:
+      'This was one of the best books I’ve read in recent years. It truly transformed my perspective on sleep and completely reshaped my daily routine. Sacrificing sleep is no longer an option.',
+    weekTime: [5],
+    status: 'done'
+  },
+  {
     title: 'Incognito',
     author: 'David Eagleman',
-    notes: '',
+    notes:
+      'This book takes us on a journey into the inner workings of the brain, reminding me once again what an extraordinary organ it is and prompting me to reflect on the hidden mechanisms behind our decisions.',
     weekTime: [4],
-    status: 'reading'
+    status: 'done'
   },
   {
     title: 'Nexus',
