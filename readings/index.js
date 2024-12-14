@@ -1,10 +1,42 @@
 const books = [
   {
+    title: 'The Art of Saying No',
+    author: 'Müthiş Psikoloji',
+    notes: '',
+    weekTime: [11],
+    status: 'reading'
+  },
+  {
+    title: 'The Nakano Thrift Shop',
+    author: 'Hiromi Kawakami',
+    notes:
+      'It had been a long time since I last read a novel, and this was just what I needed. I’d like to include more novels like this in my reading list. It was a book that flowed effortlessly.',
+    weekTime: [10],
+    status: 'done'
+  },
+  {
+    title: 'The Nakano Thrift Shop',
+    author: 'Hiromi Kawakami',
+    notes:
+      'It had been a long time since I last read a novel, and this was just what I needed. I’d like to include more novels like this in my reading list. It was a book that flowed effortlessly.',
+    weekTime: [9],
+    status: 'done'
+  },
+  {
+    title: 'Legends and Realities in Ottoman History',
+    author: 'Halil İnancık',
+    notes:
+      'I’ve always been deeply interested in Ottoman history, and this book offered a wealth of fascinating details about key events. Halil İnalcık is truly an extraordinary historian.',
+    weekTime: [8],
+    status: 'done'
+  },
+  {
     title: 'Glucose Revolution',
     author: 'Jessie Inchauspe',
-    notes: '',
+    notes:
+      'This book completely changed my perspective on eating. It was a wonderful coincidence that my first read on nutrition turned out to be this one. I plan to explore more books on nutrition moving forward.',
     weekTime: [7],
-    status: 'reading'
+    status: 'done'
   },
   {
     title: 'Wabi Sabi: The Wisdom in Imperfection',
