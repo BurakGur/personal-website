@@ -1,10 +1,26 @@
 const books = [
   {
+    title: 'Stolen Focus: Why You Can’t Pay Attention',
+    author: 'Johann Hari',
+    notes: '',
+    weekTime: [13],
+    status: 'reading'
+  },
+  {
+    title: 'The Midnight Library',
+    author: 'Matt Haig',
+    notes:
+      'One of the best novels I’ve read recently. I don’t read novels often, but this one truly stood out with its compelling theme and excellent storytelling.',
+    weekTime: [12],
+    status: 'done'
+  },
+  {
     title: 'The Art of Saying No',
     author: 'Müthiş Psikoloji',
-    notes: '',
+    notes:
+      'While it offers some wonderful insights into life, I feel it could be even better with more examples and a storytelling approach.',
     weekTime: [11],
-    status: 'reading'
+    status: 'done'
   },
   {
     title: 'The Nakano Thrift Shop',
