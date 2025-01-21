@@ -1,10 +1,26 @@
 const books = [
   {
+    title: 'Factfulness',
+    author: 'Hans Rosling',
+    notes: '',
+    weekTime: [15],
+    status: 'reading'
+  },
+  {
+    title: 'How Children Succeed',
+    author: 'Paul Tough',
+    notes:
+      'It is the product of an in-depth research on the education system. A useful book that presents different perspectives with a beautiful approach.',
+    weekTime: [14],
+    status: 'done'
+  },
+  {
     title: 'Stolen Focus: Why You Can’t Pay Attention',
     author: 'Johann Hari',
-    notes: '',
+    notes:
+      'It offers an incredible perspective, especially on the topic of attention. A book that everyone who cannot focus should read.',
     weekTime: [13],
-    status: 'reading'
+    status: 'done'
   },
   {
     title: 'The Midnight Library',
