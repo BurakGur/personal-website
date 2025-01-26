@@ -27,7 +27,7 @@ export default function Reading() {
             >
               <div className="flex items-center justify-between">
                 <div className="text-xs font-medium text-gray-500 dark:text-gray-600">
-                  WEEK {book.weekTime.join(',')}
+                  WEEK {book.weekTime.join(', ')}
                 </div>
                 <div>
                   {book.status === 'done' ? (

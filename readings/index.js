@@ -1,10 +1,18 @@
 const books = [
   {
+    title: 'Guns, Germs, and Steel',
+    author: 'Jared Diamond',
+    notes: '',
+    weekTime: [16, 17],
+    status: 'reading'
+  },
+  {
     title: 'Factfulness',
     author: 'Hans Rosling',
-    notes: '',
+    notes:
+      'A truly beautiful book that will change your perspective on the world. It is a remarkable work, particularly in how it shows that the world we live in isn’t as bad as it may seem and that this perspective can be applied everywhere.',
     weekTime: [15],
-    status: 'reading'
+    status: 'done'
   },
   {
     title: 'How Children Succeed',
